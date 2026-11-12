@@ -75,13 +75,14 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .pill[hidden]{display:none}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(46,157,91,0)}100%{box-shadow:0 0 0 0 rgba(46,157,91,0)}}
 .badge{font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
-.odo{display:inline-flex;height:1em;line-height:1;overflow:hidden;vertical-align:-.12em}
-.odo-col{display:flex;flex-direction:column}.odo-col span{height:1em}
+.odo{display:inline-flex;height:1.2em;line-height:1.2;overflow:hidden;vertical-align:bottom}
+.odo-col{display:flex;flex-direction:column}.odo-col span{height:1.2em;line-height:1.2}
+[data-split]>div{padding-bottom:.14em;margin-bottom:-.14em}
 /* ---------- HERO (intro is pure CSS: moving on the first paint) ---------- */
 .hero{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero h1{font-size:clamp(2.9rem,7.0vw,11rem)}
 .hl{display:block;overflow:clip;padding-bottom:.07em;margin-bottom:-.07em}
-.hl>span{display:block;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
+.hl>span{display:block;text-wrap:balance;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
 @keyframes rise{from{transform:translateY(118%) rotate(3deg)}}
 .hero [data-in]{animation:fadeup .7s cubic-bezier(.215,.61,.355,1) both;animation-delay:calc(.75s + var(--i,0)*.07s)}
 .hero .eyebrow[data-in]{animation-delay:.12s}
@@ -98,6 +99,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero-media{container-type:size}
 .typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
+@media (max-width:768px){.hero{min-height:0;padding-bottom:100px!important}.hero .sub{font-size:1rem;margin-top:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.hero .actions{margin-top:18px}.hero .proof{font-size:1rem}}
 .h-ed{display:flex;align-items:center;padding:112px 0 48px}
 .h-ed .grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(30px,5vw,90px);align-items:end;width:100%}
 .h-ed h1{margin-top:22px;font-weight:400;letter-spacing:-.025em;line-height:.92}
@@ -114,11 +116,11 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 @keyframes mq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.mega .track{animation:none}}
 /* ---------- statement ---------- */
-.statement{padding:clamp(100px,14vw,200px) 0}
+.statement{padding:clamp(64px,8vw,120px) 0 clamp(32px,4vw,64px)}
 .statement p{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(2rem,4.6vw,4.4rem);line-height:1.08;max-width:22ch}
 .statement .eyebrow{display:block;margin-bottom:28px}
 /* ---------- dishes ---------- */
-.dishes{position:relative;padding:clamp(80px,10vw,140px) 0 clamp(60px,8vw,110px);overflow:hidden}
+.dishes{position:relative;padding:clamp(48px,6vw,96px) 0 clamp(60px,8vw,110px);overflow:hidden}
 .dishes .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:46px;position:relative;z-index:2}
 .dishes h2,.sec-title{font-size:clamp(2.6rem,6vw,5.6rem)}
 .hg{min-height:100svh;display:flex;align-items:center}
@@ -129,7 +131,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 html.mo .hg .dish-track{overflow:visible}
 .dish{flex:0 0 clamp(270px,27vw,410px);display:flex;flex-direction:column;gap:14px;scroll-snap-align:start}
 .dish .ph{position:relative;height:min(54svh,540px);border-radius:var(--r);overflow:hidden;background:var(--card)}
-.dish .ph img{position:absolute;inset:0 -8%;width:116%;height:100%;object-fit:cover}
+.dish .ph img{position:absolute;inset:0 -8%;width:116%;max-width:none;height:100%;object-fit:cover}
 .dish .num{position:absolute;top:16px;left:18px;font-family:var(--display);font-size:1.05rem;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}
 .dish .nophoto{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:clamp(22px,2.4vw,34px);height:100%;background:var(--accent2);color:var(--ink);position:relative;overflow:hidden}
 .dish .nophoto b{font-family:var(--display);font-weight:var(--dw);font-size:clamp(2rem,3vw,3.1rem);line-height:.96;letter-spacing:var(--dt)}
@@ -150,9 +152,10 @@ html.mo .hg .dish-track{overflow:visible}
 .grow{position:relative;z-index:2;height:220svh;background:var(--bg)}
 .grow-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .grow-frame{position:absolute;inset:0;clip-path:inset(22% 28% 22% 28% round 32px)}
-.grow-frame img{width:100%;height:100%;object-fit:cover}
+.grow-frame{display:flex;align-items:center;justify-content:center}
+.grow-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .grow-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5))}
-.grow-word{position:relative;z-index:2;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
+.grow-word{position:relative;z-index:2;max-width:100%;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
 .grow-cap{position:absolute;z-index:3;left:0;right:0;bottom:clamp(28px,7vh,80px);text-align:center;color:#fff;display:flex;flex-direction:column;align-items:center;gap:16px;font-size:1.05rem;padding:0 20px}
 .grow-cap .btn{color:#fff;border-color:rgba(255,255,255,.75)}
 .grow-cap .btn.primary{color:var(--on-accent);border-color:var(--accent)}
@@ -165,11 +168,12 @@ html.mo-off .grow{height:auto}html.mo-off .grow-sticky{position:relative}html.mo
 .menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;position:sticky;top:76px;z-index:5;background:var(--card);padding:12px 0}
 .menu-tabs a{text-decoration:none;font-size:.88rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);transition:background .25s,color .25s}
 .menu-tabs a:hover{background:var(--ink);color:var(--bg)}
+@media (max-width:768px){.menu-tabs{top:64px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad)) 28px;padding:10px var(--pad)}.menu-tabs::-webkit-scrollbar{display:none}.menu-tabs a{flex:none}}
 .menu-sec{margin-bottom:64px;scroll-margin-top:150px}
 .menu-sec h3{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(1.9rem,3.4vw,2.8rem);margin-bottom:10px}
 .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));column-gap:64px}
-.item{padding:18px 0;border-bottom:1px solid var(--line);transition:opacity .3s,padding .35s var(--ease)}
-@media (hover:hover){.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
+.item{padding:18px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease)}
+@media (hover:hover){.items:has(.item:hover) .item{transition:opacity .3s,padding .35s var(--ease)}.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
 .item .row{display:flex;align-items:baseline;gap:10px}
 .item .nm{font-weight:650;font-size:1.06rem}
 .item .nv{font-family:var(--script,var(--body));color:var(--accent);font-size:.92rem;margin-left:6px}
@@ -218,7 +222,8 @@ footer{position:fixed;left:0;bottom:0;width:100%;height:clamp(420px,72svh,760px)
 .foot-cta .btn{color:var(--on-accent)}
 .foot-cta .btn.primary{background:var(--on-accent);border-color:var(--on-accent);color:var(--accent)}
 .wordmark-xl{font-family:var(--display);font-weight:var(--dw);letter-spacing:-.045em;line-height:.8;font-size:min(24vw,24rem);white-space:nowrap;padding:0 var(--pad)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+footer .wrap{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+.foot-cta,.wordmark-xl{max-width:var(--maxw);margin-inline:auto;width:100%}
 footer .soc{display:flex;gap:20px}
 @media (max-width:768px){footer{padding-bottom:96px}.foot-wrap,footer{height:clamp(420px,70svh,640px)}}
 /* ---------- mobile action bar ---------- */
@@ -280,7 +285,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 
-<section class="statement"><div class="wrap"><span class="eyebrow">Greek wine bar · Back Bay</span><p data-fill>Krasi means wine, literally. We are a wine bar first, a tribute to regional Greece with a modern twist. We pour a Greek list chosen bottle by bottle.</p></div></section>
+<section class="statement"><div class="wrap"><span class="eyebrow">Who we are</span><p data-fill>Krasi means wine, literally. We are a wine bar first, a tribute to regional Greece with a modern twist. We pour a Greek list chosen bottle by bottle.</p></div></section>
 
 
 
@@ -293,14 +298,18 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
       <article class="dish"><div class="ph"><div class="nophoto" data-n="01"><b>Tiropita rolls</b><small>Greek cheese bread with halloumi and graviera, served with homemade Greek honey butter.</small><em>$12</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="02"><b>Makarounes</b><small>Karpathian pasta, caramelized onions, fall vegetables, olive oil, brown butter, mizithra.</small><em>$20</em></div></div>
       </article>
+      <article class="dish filler" aria-hidden="true"><div class="ph"><img src="img/cced7b7b72.jpg" alt="" loading="lazy"></div></article>
       
       <article class="dish"><div class="ph"><div class="nophoto" data-n="03"><b>Giouvetsi</b><small>Braised lamb shoulder, orzo, cinnamon, grated mizithra, tomato sauce.</small><em>$36</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="04"><b>Portokalopita</b><small>Orange phyllo cake, syrup, manouri ice cream.</small><em>$14</em></div></div>
       </article>
+      <article class="dish filler" aria-hidden="true"><div class="ph"><img src="img/2099dfcc42.jpg" alt="" loading="lazy"></div></article>
       
     </div>
   </div>
@@ -309,8 +318,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 <section class="grow" aria-label="Krasi"><div class="grow-sticky">
-  <div class="grow-frame"><img src="img/0c88a33ba4.jpg" alt="Krasi" loading="lazy"></div>
-  <div class="grow-word">Krasi</div>
+  <div class="grow-frame"><img src="img/0c88a33ba4.jpg" alt="Krasi" loading="lazy"><div class="grow-word">Krasi</div></div>
   <div class="grow-cap"><span>3 min walk from Hynes Convention Center</span><a class="btn primary" href="https://www.opentable.com/r/krasi-boston" target="_blank" rel="noopener" data-magnetic>Book a table <span class="arr">→</span></a></div>
 </div></section>
 
@@ -381,7 +389,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     
     <p class="menu-note"><a href="https://www.krasiboston.com/s/KRASI_FallFriday_Oct272026.pdf" target="_blank" rel="noopener">Full menu →</a></p>
   </div>
-  <div class="peek" data-pics='["img/cced7b7b72.jpg", "img/2099dfcc42.jpg", "img/87f7e5a5c6.jpg", "img/85de1bf62c.jpg", "img/b769adaa9a.jpg"]' aria-hidden="true"><img alt=""></div>
+  
 </section>
 
 
@@ -396,7 +404,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 <section class="gal" aria-label="Photos">
-  <div class="wrap"><div class="gallery"><figure data-curtain="up"><img src="img/cced7b7b72.jpg" alt="Krasi" loading="lazy" data-parallax="8"></figure><figure data-curtain="left"><img src="img/2099dfcc42.jpg" alt="Krasi" loading="lazy" data-parallax="12"></figure><figure data-curtain="right"><img src="img/87f7e5a5c6.jpg" alt="Krasi" loading="lazy" data-parallax="10"></figure><figure data-curtain="down"><img src="img/85de1bf62c.jpg" alt="Krasi" loading="lazy" data-parallax="12"></figure><figure data-curtain="up"><img src="img/b769adaa9a.jpg" alt="Krasi" loading="lazy" data-parallax="8"></figure></div></div>
+  <div class="wrap"><div class="gallery"><figure data-curtain="up"><img src="img/87f7e5a5c6.jpg" alt="Krasi" loading="lazy" data-parallax="8"></figure><figure data-curtain="left"><img src="img/85de1bf62c.jpg" alt="Krasi" loading="lazy" data-parallax="12"></figure><figure data-curtain="right"><img src="img/b769adaa9a.jpg" alt="Krasi" loading="lazy" data-parallax="10"></figure></div></div>
 </section>
 
 
@@ -444,6 +452,7 @@ addEventListener('scroll',chk,{passive:true});addEventListener('scroll',function
 
 
 <script>
+(function(){var h=document.querySelector('header.top');function sc(){h.classList.toggle('solid',scrollY>60)}addEventListener('scroll',sc,{passive:true});sc();})();
 (function(){
   var H={"0": [["10:00", "15:00"], ["17:00", "23:00"]], "1": [["17:00", "23:00"]], "2": [["17:00", "23:00"]], "3": [["17:00", "23:00"]], "4": [["17:00", "23:00"]], "5": [["11:00", "14:30"], ["17:00", "23:00"]], "6": [["10:00", "15:00"], ["17:00", "23:00"]]};
   var pills=document.querySelectorAll('[data-open]');
@@ -486,8 +495,6 @@ document.addEventListener('DOMContentLoaded',function(){
     gsap.ticker.lagSmoothing(0);
   }
 
-  /* header turns solid after the first screen's top */
-  ScrollTrigger.create({ start: 60, end: 'max', toggleClass: { targets: 'header.top', className: 'solid' } });
   /* offer pill appears once the visitor is past the first screen */
   var offer = document.getElementById('offer');
   if (offer) ScrollTrigger.create({ start: function () { return innerHeight * 0.9; }, end: 'max',
@@ -580,8 +587,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
     /* menu rows rise in */
     gsap.utils.toArray('.menu-sec').forEach(function (sec) {
-      gsap.from(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0, duration: 0.75, ease: 'expo.out', stagger: 0.03,
-        scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
+      gsap.fromTo(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.75, ease: 'expo.out', stagger: 0.03,
+        clearProps: 'opacity,visibility,transform', scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
     });
 
     /* odometer for years */
@@ -619,15 +626,15 @@ document.addEventListener('DOMContentLoaded',function(){
   mm.add(FINE, function () {
     var fig = document.querySelector('.peek');
     if (fig) {
-      var pics = JSON.parse(fig.dataset.pics || '[]'), img = fig.querySelector('img');
+      var img = fig.querySelector('img');
       gsap.set(fig, { xPercent: -50, yPercent: -50, scale: 0, autoAlpha: 1 });
       var x = gsap.quickTo(fig, 'x', { duration: 0.5, ease: 'power3' }), y = gsap.quickTo(fig, 'y', { duration: 0.5, ease: 'power3' }),
           r = gsap.quickTo(fig, 'rotation', { duration: 0.8, ease: 'power3' });
       var lx = 0;
       var move = function (e) { x(e.clientX + 150); y(e.clientY); r(gsap.utils.clamp(-14, 14, (e.clientX - lx) * 0.8)); lx = e.clientX; };
       addEventListener('pointermove', move);
-      document.querySelectorAll('.item').forEach(function (row, i) {
-        row.addEventListener('pointerenter', function () { if (!pics.length) return; img.src = pics[i % pics.length];
+      document.querySelectorAll('.item[data-peek]').forEach(function (row, i) {
+        row.addEventListener('pointerenter', function () { img.src = row.dataset.peek;
           gsap.to(fig, { scale: 1, duration: 0.45, ease: 'power3.out', overwrite: 'auto' }); });
         row.addEventListener('pointerleave', function () { gsap.to(fig, { scale: 0, duration: 0.3, ease: 'power2.in', overwrite: 'auto' }); });
       });

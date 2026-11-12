@@ -19,7 +19,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Boca Grande", "address": "149 First Street Cambridge", "geo": {"@type": "GeoCoordinates", "latitude": 42.366276, "longitude": -71.07807}, "telephone": "+16713545550", "servesCuisine": "mexican", "sameAs": ["https://www.instagram.com/boca_grande_taqueria", "https://www.facebook.com/bocaburrito"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Boca Grande", "address": "149 First Street Cambridge", "geo": {"@type": "GeoCoordinates", "latitude": 42.366276, "longitude": -71.07807}, "telephone": "+16172778900", "servesCuisine": "mexican", "sameAs": ["https://www.instagram.com/boca_grande_taqueria", "https://www.facebook.com/bocaburrito"]}</script>
 <style>
 :root{
   --bg:#FFF8EC;--ink:#1E1410;--accent:#C8321E;--accent2:#F9D77E;--muted:#6B5646;
@@ -75,13 +75,14 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .pill[hidden]{display:none}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(46,157,91,0)}100%{box-shadow:0 0 0 0 rgba(46,157,91,0)}}
 .badge{font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
-.odo{display:inline-flex;height:1em;line-height:1;overflow:hidden;vertical-align:-.12em}
-.odo-col{display:flex;flex-direction:column}.odo-col span{height:1em}
+.odo{display:inline-flex;height:1.2em;line-height:1.2;overflow:hidden;vertical-align:bottom}
+.odo-col{display:flex;flex-direction:column}.odo-col span{height:1.2em;line-height:1.2}
+[data-split]>div{padding-bottom:.14em;margin-bottom:-.14em}
 /* ---------- HERO (intro is pure CSS: moving on the first paint) ---------- */
 .hero{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero h1{font-size:clamp(2.9rem,5.68vw,11rem)}
 .hl{display:block;overflow:clip;padding-bottom:.07em;margin-bottom:-.07em}
-.hl>span{display:block;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
+.hl>span{display:block;text-wrap:balance;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
 @keyframes rise{from{transform:translateY(118%) rotate(3deg)}}
 .hero [data-in]{animation:fadeup .7s cubic-bezier(.215,.61,.355,1) both;animation-delay:calc(.75s + var(--i,0)*.07s)}
 .hero .eyebrow[data-in]{animation-delay:.12s}
@@ -98,6 +99,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero-media{container-type:size}
 .typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
+@media (max-width:768px){.hero{min-height:0;padding-bottom:100px!important}.hero .sub{font-size:1rem;margin-top:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.hero .actions{margin-top:18px}.hero .proof{font-size:1rem}}
 .a-counter{--hdr:var(--on-accent);--hdr-btn-bg:var(--on-accent);--hdr-btn-fg:var(--accent)}
 .h-ct{background:var(--accent);color:var(--on-accent);display:flex;align-items:center;padding:112px 0 60px}
 .h-ct .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,80px);align-items:center;width:100%}
@@ -122,11 +124,11 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 @keyframes mq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.mega .track{animation:none}}
 /* ---------- statement ---------- */
-.statement{padding:clamp(100px,14vw,200px) 0}
+.statement{padding:clamp(64px,8vw,120px) 0 clamp(32px,4vw,64px)}
 .statement p{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(2rem,4.6vw,4.4rem);line-height:1.08;max-width:22ch}
 .statement .eyebrow{display:block;margin-bottom:28px}
 /* ---------- dishes ---------- */
-.dishes{position:relative;padding:clamp(80px,10vw,140px) 0 clamp(60px,8vw,110px);overflow:hidden}
+.dishes{position:relative;padding:clamp(48px,6vw,96px) 0 clamp(60px,8vw,110px);overflow:hidden}
 .dishes .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:46px;position:relative;z-index:2}
 .dishes h2,.sec-title{font-size:clamp(2.6rem,6vw,5.6rem)}
 .hg{min-height:100svh;display:flex;align-items:center}
@@ -137,7 +139,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 html.mo .hg .dish-track{overflow:visible}
 .dish{flex:0 0 clamp(270px,27vw,410px);display:flex;flex-direction:column;gap:14px;scroll-snap-align:start}
 .dish .ph{position:relative;height:min(54svh,540px);border-radius:var(--r);overflow:hidden;background:var(--card)}
-.dish .ph img{position:absolute;inset:0 -8%;width:116%;height:100%;object-fit:cover}
+.dish .ph img{position:absolute;inset:0 -8%;width:116%;max-width:none;height:100%;object-fit:cover}
 .dish .num{position:absolute;top:16px;left:18px;font-family:var(--display);font-size:1.05rem;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}
 .dish .nophoto{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:clamp(22px,2.4vw,34px);height:100%;background:var(--accent2);color:var(--ink);position:relative;overflow:hidden}
 .dish .nophoto b{font-family:var(--display);font-weight:var(--dw);font-size:clamp(2rem,3vw,3.1rem);line-height:.96;letter-spacing:var(--dt)}
@@ -158,9 +160,10 @@ html.mo .hg .dish-track{overflow:visible}
 .grow{position:relative;z-index:2;height:220svh;background:var(--bg)}
 .grow-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .grow-frame{position:absolute;inset:0;clip-path:inset(22% 28% 22% 28% round 32px)}
-.grow-frame img{width:100%;height:100%;object-fit:cover}
+.grow-frame{display:flex;align-items:center;justify-content:center}
+.grow-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .grow-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5))}
-.grow-word{position:relative;z-index:2;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
+.grow-word{position:relative;z-index:2;max-width:100%;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
 .grow-cap{position:absolute;z-index:3;left:0;right:0;bottom:clamp(28px,7vh,80px);text-align:center;color:#fff;display:flex;flex-direction:column;align-items:center;gap:16px;font-size:1.05rem;padding:0 20px}
 .grow-cap .btn{color:#fff;border-color:rgba(255,255,255,.75)}
 .grow-cap .btn.primary{color:var(--on-accent);border-color:var(--accent)}
@@ -173,11 +176,12 @@ html.mo-off .grow{height:auto}html.mo-off .grow-sticky{position:relative}html.mo
 .menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;position:sticky;top:76px;z-index:5;background:var(--card);padding:12px 0}
 .menu-tabs a{text-decoration:none;font-size:.88rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);transition:background .25s,color .25s}
 .menu-tabs a:hover{background:var(--ink);color:var(--bg)}
+@media (max-width:768px){.menu-tabs{top:64px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad)) 28px;padding:10px var(--pad)}.menu-tabs::-webkit-scrollbar{display:none}.menu-tabs a{flex:none}}
 .menu-sec{margin-bottom:64px;scroll-margin-top:150px}
 .menu-sec h3{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(1.9rem,3.4vw,2.8rem);margin-bottom:10px}
 .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));column-gap:64px}
-.item{padding:18px 0;border-bottom:1px solid var(--line);transition:opacity .3s,padding .35s var(--ease)}
-@media (hover:hover){.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
+.item{padding:18px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease)}
+@media (hover:hover){.items:has(.item:hover) .item{transition:opacity .3s,padding .35s var(--ease)}.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
 .item .row{display:flex;align-items:baseline;gap:10px}
 .item .nm{font-weight:650;font-size:1.06rem}
 .item .nv{font-family:var(--script,var(--body));color:var(--accent);font-size:.92rem;margin-left:6px}
@@ -226,7 +230,8 @@ footer{position:fixed;left:0;bottom:0;width:100%;height:clamp(420px,72svh,760px)
 .foot-cta .btn{color:var(--on-accent)}
 .foot-cta .btn.primary{background:var(--on-accent);border-color:var(--on-accent);color:var(--accent)}
 .wordmark-xl{font-family:var(--display);font-weight:var(--dw);letter-spacing:-.045em;line-height:.8;font-size:min(11.95vw,24rem);white-space:nowrap;padding:0 var(--pad)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+footer .wrap{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+.foot-cta,.wordmark-xl{max-width:var(--maxw);margin-inline:auto;width:100%}
 footer .soc{display:flex;gap:20px}
 @media (max-width:768px){footer{padding-bottom:96px}.foot-wrap,footer{height:clamp(420px,70svh,640px)}}
 /* ---------- mobile action bar ---------- */
@@ -275,7 +280,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     <div class="txt">
       <span class="eyebrow" data-in>Taqueria · Cambridge</span>
       <h1 class="display"><span class="hl"><span style="--i:0">Burritos</span></span><span class="hl"><span style="--i:1">since</span></span><span class="hl"><span style="--i:2">Porter</span></span><span class="hl"><span style="--i:3">Square, 1986</span></span></h1>
-      <p class="sub" data-in style="--i:1">We&#39;re on First Street, a 7 minute walk from Lechmere, open Monday to Friday 11 to 6, so come for a Burrito Grande.</p>
+      <p class="sub" data-in style="--i:1">We’re on First Street, a 7 minute walk from Lechmere, open Monday to Friday 11 to 6, so come for a Burrito Grande.</p>
       <div class="actions" data-in style="--i:2"><a class="btn primary" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener" data-magnetic>Order pickup <span class="arr">→</span></a><a class="btn" href="#menu">See the menu</a></div>
       <div class="meta" data-in style="--i:3"><span class="pill" data-open hidden><i></i><span></span></span><span class="badge">Since <span class="odo" data-odo="1986" aria-label="1986">1986</span></span><span class="badge">Owner Silvia Whitman</span><span class="badge">No MSG</span></div>
     </div>
@@ -288,7 +293,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 
-<section class="statement"><div class="wrap"><span class="eyebrow">Taqueria · Cambridge</span><p data-fill>We opened our first Boca Grande in Porter Square in 1986. We take our cues from Tex-Mex: enchiladas, tamales, burritos, quesadillas and tacos.</p></div></section>
+<section class="statement"><div class="wrap"><span class="eyebrow">Since 1986</span><p data-fill>We opened our first Boca Grande in Porter Square in 1986. We take our cues from Tex-Mex: enchiladas, tamales, burritos, quesadillas and tacos.</p></div></section>
 
 
 
@@ -303,16 +308,20 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
         
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="02"><b>Wet Burrito</b><small>The same burrito, topped with red or green sauce, cheese and sour cream.</small><em>$12.25</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="03"><b>Tamales</b><small>Two tamales with your choice of filling, with sour cream and salsa on the side.</small><em>$10.50</em></div></div>
       </article>
+      
       
       <article class="dish"><div class="ph"><img src="img/e4b6a280af.jpg" alt="Taco" loading="lazy"><span class="num">04</span></div>
         <div class="row"><h3>Taco</h3><span class="price">$4.25</span></div><p>Grilled corn tortilla with your choice of filling, salsa and hot sauce.</p>
         
       </article>
+      
       
     </div>
   </div>
@@ -321,8 +330,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 <section class="grow" aria-label="Boca Grande"><div class="grow-sticky">
-  <div class="grow-frame"><img src="img/9718e86cb4.jpg" alt="Boca Grande" loading="lazy"></div>
-  <div class="grow-word">Boca Grande</div>
+  <div class="grow-frame"><img src="img/9718e86cb4.jpg" alt="Boca Grande" loading="lazy"><div class="grow-word">Boca Grande</div></div>
   <div class="grow-cap"><span>7 min walk from Lechmere</span><a class="btn primary" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener" data-magnetic>Order pickup <span class="arr">→</span></a></div>
 </div></section>
 
@@ -330,12 +338,12 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 <section id="fullmenu" class="menu">
   <div class="wrap">
-    <div class="head"><div><span class="eyebrow">Menu</span><h2 class="display sec-title" data-split style="margin-top:14px">The menu</h2></div><p class="menu-note">Prices and dishes can change. Ask about today&#39;s specials.</p></div>
+    <div class="head"><div><span class="eyebrow">Menu</span><h2 class="display sec-title" data-split style="margin-top:14px">The menu</h2></div><p class="menu-note">Prices and dishes can change. Ask about today’s specials.</p></div>
     <div class="menu-tabs"><a href="#m-1">Burritos, Plates and Tacos</a><a href="#m-2">Extras</a><a href="#m-3">Choice of Filling: Chicken</a><a href="#m-4">Choice of Filling: Beef and Pork</a><a href="#m-5">Choice of Filling: Vegetarian</a><a href="#m-6">Beverages</a></div>
     
     <div class="menu-sec" id="m-1"><h3>Burritos, Plates and Tacos</h3>
       <div class="items">
-        <div class="item"><div class="row"><span class="nm">Burrito Grande</span><span class="dots"></span><span class="pr">$10.50</span></div><div class="ds">12&#34; steamed flour tortilla with choice of filling, rice, beans (black, pinto or refried), cheese, salsa and hot sauce</div></div>
+        <div class="item" data-peek="img/de9c2d92fe.jpg"><div class="row"><span class="nm">Burrito Grande</span><span class="dots"></span><span class="pr">$10.50</span></div><div class="ds">12&#34; steamed flour tortilla with choice of filling, rice, beans (black, pinto or refried), cheese, salsa and hot sauce</div></div>
       
         <div class="item"><div class="row"><span class="nm">Burrito Bowl<span class="tag">GF</span></span><span class="dots"></span><span class="pr">$10.50</span></div><div class="ds">Just like a burrito without the tortilla</div></div>
       
@@ -347,7 +355,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
       
         <div class="item"><div class="row"><span class="nm">Mexican Plate</span><span class="dots"></span><span class="pr">$10.50</span></div><div class="ds">Just like a burrito without the tortilla. Served with two grilled corn tortillas</div></div>
       
-        <div class="item"><div class="row"><span class="nm">Taco</span><span class="dots"></span><span class="pr">$4.25</span></div><div class="ds">Grilled corn tortilla with choice of filling, salsa and hot sauce</div></div>
+        <div class="item" data-peek="img/e4b6a280af.jpg"><div class="row"><span class="nm">Taco</span><span class="dots"></span><span class="pr">$4.25</span></div><div class="ds">Grilled corn tortilla with choice of filling, salsa and hot sauce</div></div>
       
         <div class="item"><div class="row"><span class="nm">Tostada</span><span class="dots"></span><span class="pr">$9.75</span></div><div class="ds">Crispy corn tortilla topped with choice of filling, refried beans, salsa, lettuce, cheese, guacamole, sour cream and cheese</div></div>
       
@@ -427,7 +435,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     
     <p class="menu-note"><a href="https://www.bocagranderestaurant.com/menu" target="_blank" rel="noopener">Full menu →</a></p>
   </div>
-  <div class="peek" data-pics='["img/de9c2d92fe.jpg", "img/e4b6a280af.jpg", "img/a5e06665ef.jpg", "img/7e5b55a9db.jpg", "img/5348c96ea5.jpg", "img/58ec2e5e4d.jpg"]' aria-hidden="true"><img alt=""></div>
+  <div class="peek" aria-hidden="true"><img alt=""></div>
 </section>
 
 
@@ -435,7 +443,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 <section id="story" class="story">
   <div class="wrap story-grid">
     
-    <div style="grid-column:1/-1;max-width:780px"><span class="eyebrow">About us</span><h2 class="display" data-split>Porter Square, 1986</h2><p data-rise>We start the day with fresh meats, poultry and vegetables, and again through the day. Our beans and rice are vegetarian based. Our sauces are made from whole, fresh tomatoes, tomatillos and fresh or dried chiles.</p><p data-rise>In 2016, the original owner retired. Silvia Whitman stepped into the ownership role. She had worked with us for 25 years and served as district general manager for all five locations. The core of the menu hasn&#39;t changed, and we still listen to what customers suggest.</p></div>
+    <div style="grid-column:1/-1;max-width:780px"><span class="eyebrow">About us</span><h2 class="display" data-split>Porter Square, 1986</h2><p data-rise>We start the day with fresh meats, poultry and vegetables, and again through the day. Our beans and rice are vegetarian based. Our sauces are made from whole, fresh tomatoes, tomatillos and fresh or dried chiles.</p><p data-rise>In 2016, the original owner retired. Silvia Whitman stepped into the ownership role. She had worked with us for 25 years and served as district general manager for all five locations. The core of the menu hasn’t changed, and we still listen to what customers suggest.</p></div>
   </div>
 </section>
 
@@ -453,7 +461,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     <div class="visit-grid">
       <div data-rise><h3>Find us</h3><p class="big">149 First Street Cambridge</p><p style="margin-top:12px;opacity:.75">7 min walk from Lechmere</p><p style="margin-top:18px"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Boca%20Grande%20149%20First%20Street%20Cambridge" target="_blank" rel="noopener">Get directions →</a></p></div>
       <div data-rise><h3>Hours</h3><ul class="hours"><li><span>Mon–Fri</span><span>11 am – 6 pm</span></li><li><span>Sat–Sun</span><span>Closed</span></li></ul><p style="margin-top:16px"><span class="pill" data-open hidden><i></i><span></span></span></p></div>
-      <div data-rise><h3>Get in touch</h3><p class="big"><a href="tel:+16713545550">(671) 354-5550</a></p><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"><a class="btn primary" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener">Order pickup <span class="arr">→</span></a></div></div>
+      <div data-rise><h3>Get in touch</h3><p class="big"><a href="tel:+16172778900">(617) 277-8900</a></p><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"><a class="btn primary" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener">Order pickup <span class="arr">→</span></a></div></div>
     </div>
   </div>
 </section>
@@ -461,14 +469,14 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 <div class="foot-wrap">
 <footer>
-  <div class="foot-cta"><a class="btn primary" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener" data-magnetic>Order pickup <span class="arr">→</span></a><a class="btn" href="tel:+16713545550">Call (671) 354-5550</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boca%20Grande%20149%20First%20Street%20Cambridge" target="_blank" rel="noopener">Directions</a></div>
+  <div class="foot-cta"><a class="btn primary" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener" data-magnetic>Order pickup <span class="arr">→</span></a><a class="btn" href="tel:+16172778900">Call (617) 277-8900</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boca%20Grande%20149%20First%20Street%20Cambridge" target="_blank" rel="noopener">Directions</a></div>
   <div class="wordmark-xl" aria-hidden="true">Boca Grande</div>
   <div class="wrap"><span>© 2026 Boca Grande · Cambridge</span><span class="soc"><a href="https://www.instagram.com/boca_grande_taqueria" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/bocaburrito" target="_blank" rel="noopener">Facebook</a></span></div>
 </footer>
 </div>
 
 <nav class="actionbar" aria-label="Quick actions">
-<a class="" href="tel:+16713545550"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Call</span></a><a class="main" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Order</span></a><a class="" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boca%20Grande%20149%20First%20Street%20Cambridge" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+<a class="" href="tel:+16172778900"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Call</span></a><a class="main" href="https://www.ezcater.com/brand/pvt/boca-grande-taqueria" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Order</span></a><a class="" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boca%20Grande%20149%20First%20Street%20Cambridge" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
 </nav>
 
 
@@ -490,6 +498,7 @@ addEventListener('scroll',chk,{passive:true});addEventListener('scroll',function
 
 
 <script>
+(function(){var h=document.querySelector('header.top');function sc(){h.classList.toggle('solid',scrollY>60)}addEventListener('scroll',sc,{passive:true});sc();})();
 (function(){
   var H={"0": [], "1": [["11:00", "18:00"]], "2": [["11:00", "18:00"]], "3": [["11:00", "18:00"]], "4": [["11:00", "18:00"]], "5": [["11:00", "18:00"]], "6": []};
   var pills=document.querySelectorAll('[data-open]');
@@ -532,8 +541,6 @@ document.addEventListener('DOMContentLoaded',function(){
     gsap.ticker.lagSmoothing(0);
   }
 
-  /* header turns solid after the first screen's top */
-  ScrollTrigger.create({ start: 60, end: 'max', toggleClass: { targets: 'header.top', className: 'solid' } });
   /* offer pill appears once the visitor is past the first screen */
   var offer = document.getElementById('offer');
   if (offer) ScrollTrigger.create({ start: function () { return innerHeight * 0.9; }, end: 'max',
@@ -626,8 +633,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
     /* menu rows rise in */
     gsap.utils.toArray('.menu-sec').forEach(function (sec) {
-      gsap.from(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0, duration: 0.75, ease: 'expo.out', stagger: 0.03,
-        scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
+      gsap.fromTo(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.75, ease: 'expo.out', stagger: 0.03,
+        clearProps: 'opacity,visibility,transform', scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
     });
 
     /* odometer for years */
@@ -665,15 +672,15 @@ document.addEventListener('DOMContentLoaded',function(){
   mm.add(FINE, function () {
     var fig = document.querySelector('.peek');
     if (fig) {
-      var pics = JSON.parse(fig.dataset.pics || '[]'), img = fig.querySelector('img');
+      var img = fig.querySelector('img');
       gsap.set(fig, { xPercent: -50, yPercent: -50, scale: 0, autoAlpha: 1 });
       var x = gsap.quickTo(fig, 'x', { duration: 0.5, ease: 'power3' }), y = gsap.quickTo(fig, 'y', { duration: 0.5, ease: 'power3' }),
           r = gsap.quickTo(fig, 'rotation', { duration: 0.8, ease: 'power3' });
       var lx = 0;
       var move = function (e) { x(e.clientX + 150); y(e.clientY); r(gsap.utils.clamp(-14, 14, (e.clientX - lx) * 0.8)); lx = e.clientX; };
       addEventListener('pointermove', move);
-      document.querySelectorAll('.item').forEach(function (row, i) {
-        row.addEventListener('pointerenter', function () { if (!pics.length) return; img.src = pics[i % pics.length];
+      document.querySelectorAll('.item[data-peek]').forEach(function (row, i) {
+        row.addEventListener('pointerenter', function () { img.src = row.dataset.peek;
           gsap.to(fig, { scale: 1, duration: 0.45, ease: 'power3.out', overwrite: 'auto' }); });
         row.addEventListener('pointerleave', function () { gsap.to(fig, { scale: 0, duration: 0.3, ease: 'power2.in', overwrite: 'auto' }); });
       });

@@ -19,7 +19,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Tasty Mo:Mo", "address": "508 Medford Street", "geo": {"@type": "GeoCoordinates", "latitude": 42.396222, "longitude": -71.103647}, "servesCuisine": "asian", "sameAs": ["https://www.instagram.com/tastymomo", "https://www.facebook.com/tastymomo/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Tasty Mo:Mo", "address": "508 Medford Street", "geo": {"@type": "GeoCoordinates", "latitude": 42.396222, "longitude": -71.103647}, "telephone": "+16177640222", "servesCuisine": "asian", "sameAs": ["https://www.instagram.com/tastymomo", "https://www.facebook.com/tastymomo/"]}</script>
 <style>
 :root{
   --bg:#FFF6E8;--ink:#1C1210;--accent:#D22F25;--accent2:#FFD9A0;--muted:#6B4F45;
@@ -75,13 +75,14 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .pill[hidden]{display:none}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(46,157,91,0)}100%{box-shadow:0 0 0 0 rgba(46,157,91,0)}}
 .badge{font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
-.odo{display:inline-flex;height:1em;line-height:1;overflow:hidden;vertical-align:-.12em}
-.odo-col{display:flex;flex-direction:column}.odo-col span{height:1em}
+.odo{display:inline-flex;height:1.2em;line-height:1.2;overflow:hidden;vertical-align:bottom}
+.odo-col{display:flex;flex-direction:column}.odo-col span{height:1.2em;line-height:1.2}
+[data-split]>div{padding-bottom:.14em;margin-bottom:-.14em}
 /* ---------- HERO (intro is pure CSS: moving on the first paint) ---------- */
 .hero{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero h1{font-size:clamp(2.9rem,6.42vw,11rem)}
 .hl{display:block;overflow:clip;padding-bottom:.07em;margin-bottom:-.07em}
-.hl>span{display:block;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
+.hl>span{display:block;text-wrap:balance;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
 @keyframes rise{from{transform:translateY(118%) rotate(3deg)}}
 .hero [data-in]{animation:fadeup .7s cubic-bezier(.215,.61,.355,1) both;animation-delay:calc(.75s + var(--i,0)*.07s)}
 .hero .eyebrow[data-in]{animation-delay:.12s}
@@ -98,6 +99,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero-media{container-type:size}
 .typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
+@media (max-width:768px){.hero{min-height:0;padding-bottom:100px!important}.hero .sub{font-size:1rem;margin-top:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.hero .actions{margin-top:18px}.hero .proof{font-size:1rem}}
 .a-market{--hdr:var(--on-accent);--hdr-btn-bg:var(--on-accent);--hdr-btn-fg:var(--accent)}
 .h-mk{display:flex;flex-direction:column}
 .h-mk .block{background:var(--accent);color:var(--on-accent);padding:116px 0 clamp(28px,4vw,52px)}
@@ -108,7 +110,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .h-mk .row2{display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;margin-top:26px}
 .h-mk .sub,.h-mk .actions{margin-top:0}
 .h-mk .btn{color:var(--on-accent)}
-.h-mk .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.h-mk .btn.primary{background:var(--accent2);border-color:var(--accent2);color:var(--ink)}
 .h-mk .stk{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}
 .sticker{display:inline-block;transform:rotate(var(--rot));background:var(--accent2);color:var(--ink);font-weight:800;font-size:.84rem;text-transform:uppercase;letter-spacing:.06em;padding:9px 14px;border-radius:9px;box-shadow:3px 3px 0 var(--ink)}
 .h-mk .strip{flex:1;min-height:36svh;border-bottom:4px solid var(--ink)}
@@ -126,11 +128,11 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 @keyframes mq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.mega .track{animation:none}}
 /* ---------- statement ---------- */
-.statement{padding:clamp(100px,14vw,200px) 0}
+.statement{padding:clamp(64px,8vw,120px) 0 clamp(32px,4vw,64px)}
 .statement p{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(2rem,4.6vw,4.4rem);line-height:1.08;max-width:22ch}
 .statement .eyebrow{display:block;margin-bottom:28px}
 /* ---------- dishes ---------- */
-.dishes{position:relative;padding:clamp(80px,10vw,140px) 0 clamp(60px,8vw,110px);overflow:hidden}
+.dishes{position:relative;padding:clamp(48px,6vw,96px) 0 clamp(60px,8vw,110px);overflow:hidden}
 .dishes .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:46px;position:relative;z-index:2}
 .dishes h2,.sec-title{font-size:clamp(2.6rem,6vw,5.6rem)}
 .hg{min-height:100svh;display:flex;align-items:center}
@@ -141,7 +143,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 html.mo .hg .dish-track{overflow:visible}
 .dish{flex:0 0 clamp(270px,27vw,410px);display:flex;flex-direction:column;gap:14px;scroll-snap-align:start}
 .dish .ph{position:relative;height:min(54svh,540px);border-radius:var(--r);overflow:hidden;background:var(--card)}
-.dish .ph img{position:absolute;inset:0 -8%;width:116%;height:100%;object-fit:cover}
+.dish .ph img{position:absolute;inset:0 -8%;width:116%;max-width:none;height:100%;object-fit:cover}
 .dish .num{position:absolute;top:16px;left:18px;font-family:var(--display);font-size:1.05rem;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}
 .dish .nophoto{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:clamp(22px,2.4vw,34px);height:100%;background:var(--accent2);color:var(--ink);position:relative;overflow:hidden}
 .dish .nophoto b{font-family:var(--display);font-weight:var(--dw);font-size:clamp(2rem,3vw,3.1rem);line-height:.96;letter-spacing:var(--dt)}
@@ -162,9 +164,10 @@ html.mo .hg .dish-track{overflow:visible}
 .grow{position:relative;z-index:2;height:220svh;background:var(--bg)}
 .grow-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .grow-frame{position:absolute;inset:0;clip-path:inset(22% 28% 22% 28% round 32px)}
-.grow-frame img{width:100%;height:100%;object-fit:cover}
+.grow-frame{display:flex;align-items:center;justify-content:center}
+.grow-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .grow-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5))}
-.grow-word{position:relative;z-index:2;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
+.grow-word{position:relative;z-index:2;max-width:100%;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
 .grow-cap{position:absolute;z-index:3;left:0;right:0;bottom:clamp(28px,7vh,80px);text-align:center;color:#fff;display:flex;flex-direction:column;align-items:center;gap:16px;font-size:1.05rem;padding:0 20px}
 .grow-cap .btn{color:#fff;border-color:rgba(255,255,255,.75)}
 .grow-cap .btn.primary{color:var(--on-accent);border-color:var(--accent)}
@@ -177,11 +180,12 @@ html.mo-off .grow{height:auto}html.mo-off .grow-sticky{position:relative}html.mo
 .menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;position:sticky;top:76px;z-index:5;background:var(--card);padding:12px 0}
 .menu-tabs a{text-decoration:none;font-size:.88rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);transition:background .25s,color .25s}
 .menu-tabs a:hover{background:var(--ink);color:var(--bg)}
+@media (max-width:768px){.menu-tabs{top:64px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad)) 28px;padding:10px var(--pad)}.menu-tabs::-webkit-scrollbar{display:none}.menu-tabs a{flex:none}}
 .menu-sec{margin-bottom:64px;scroll-margin-top:150px}
 .menu-sec h3{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(1.9rem,3.4vw,2.8rem);margin-bottom:10px}
 .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));column-gap:64px}
-.item{padding:18px 0;border-bottom:1px solid var(--line);transition:opacity .3s,padding .35s var(--ease)}
-@media (hover:hover){.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
+.item{padding:18px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease)}
+@media (hover:hover){.items:has(.item:hover) .item{transition:opacity .3s,padding .35s var(--ease)}.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
 .item .row{display:flex;align-items:baseline;gap:10px}
 .item .nm{font-weight:650;font-size:1.06rem}
 .item .nv{font-family:var(--script,var(--body));color:var(--accent);font-size:.92rem;margin-left:6px}
@@ -230,13 +234,14 @@ footer{position:fixed;left:0;bottom:0;width:100%;height:clamp(420px,72svh,760px)
 .foot-cta .btn{color:var(--on-accent)}
 .foot-cta .btn.primary{background:var(--on-accent);border-color:var(--on-accent);color:var(--accent)}
 .wordmark-xl{font-family:var(--display);font-weight:var(--dw);letter-spacing:-.045em;line-height:.8;font-size:min(13.55vw,24rem);white-space:nowrap;padding:0 var(--pad)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+footer .wrap{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+.foot-cta,.wordmark-xl{max-width:var(--maxw);margin-inline:auto;width:100%}
 footer .soc{display:flex;gap:20px}
 @media (max-width:768px){footer{padding-bottom:96px}.foot-wrap,footer{height:clamp(420px,70svh,640px)}}
 /* ---------- mobile action bar ---------- */
 .actionbar{display:none}
 @media (max-width:768px){
-  .actionbar{display:grid;grid-template-columns:repeat(2,1fr);position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:60;background:var(--ink);border-radius:20px;padding:6px;gap:6px;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+  .actionbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:60;background:var(--ink);border-radius:20px;padding:6px;gap:6px;box-shadow:0 14px 34px rgba(0,0,0,.3)}
   .actionbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;border-radius:15px;color:var(--bg);text-decoration:none;font-size:.78rem;font-weight:650}
   .actionbar a.main{background:var(--accent);color:var(--on-accent)}
   .actionbar svg{width:20px;height:20px}
@@ -269,7 +274,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
   <div class="wrap">
     <a class="brand" href="#top"><span class="wm">Tasty Mo:Mo</span></a>
     <nav class="links"><a class="roll" href="#menu"><span>Menu</span><span aria-hidden="true">Menu</span></a><a class="roll" href="#story"><span>Story</span><span aria-hidden="true">Story</span></a><a class="roll" href="#visit"><span>Visit</span><span aria-hidden="true">Visit</span></a></nav>
-    <div class="top-cta"></div>
+    <div class="top-cta"><a class="btn primary" href="tel:+16177640222" data-magnetic>Call us</a></div>
   </div>
 </header>
 
@@ -279,7 +284,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     <div class="wrap">
       <div class="top-line" data-in><span class="eyebrow">Nepalese kitchen · Somerville</span></div>
       <h1 class="display"><span class="hl"><span style="--i:0">Mo:Mo, chowmein</span></span><span class="hl"><span style="--i:1">and goat curry on</span></span><span class="hl"><span style="--i:2">Medford Street</span></span></h1>
-      <div class="row2"><p class="sub" data-in style="--i:1">We are a 4 minute walk from Magoun Square, so come hungry for steamed mo:mo, or stay and dine in for the Thakali thali.</p><div class="actions" data-in style="--i:2"><a class="btn" href="#menu">See the menu</a></div></div>
+      <div class="row2"><p class="sub" data-in style="--i:1">We are a 4 minute walk from Magoun Square, so come hungry for steamed mo:mo, or stay and dine in for the Thakali thali.</p><div class="actions" data-in style="--i:2"><a class="btn primary" href="tel:+16177640222" data-magnetic>Call (617) 764-0222</a><a class="btn" href="#menu">See the menu</a></div></div>
       <div class="stk" data-in style="--i:3"><span class="sticker" style="--rot:-5deg">Charity-minded</span><span class="sticker" style="--rot:4deg">Vegan options</span><span class="sticker" style="--rot:-2deg">4.5 from 726 reviews</span><span class="pill" data-open hidden><i></i><span></span></span></div>
     </div>
   </div>
@@ -291,7 +296,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 
-<section class="statement"><div class="wrap"><span class="eyebrow">Nepalese kitchen · Somerville</span><p data-fill>Tasty Mo:Mo is a quick-serve, charity-minded eatery dishing out dumplings. We cook home-style Himalayan and Nepalese food at 508 Medford Street in Somerville.</p></div></section>
+<section class="statement"><div class="wrap"><span class="eyebrow">Our story</span><p data-fill>Tasty Mo:Mo is a quick-serve, charity-minded eatery dishing out dumplings. We cook home-style Himalayan and Nepalese food at 508 Medford Street in Somerville.</p></div></section>
 
 
 
@@ -304,14 +309,18 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
       <article class="dish"><div class="ph"><div class="nophoto" data-n="01"><b>Steamed Mo:Mo</b><small>Handmade dumplings, 8 to an order. Beef, chicken, pork, vegan or aloo (potato), with tomato sauce and chili sauce on the side.</small><em>$12.99</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="02"><b>Jhol Mo:Mo</b><small>Steamed mo:mo in a dipping sauce made of sesame, peanuts and tomato.</small><em>$13.99</em></div></div>
       </article>
+      
       
       <article class="dish"><div class="ph"><div class="nophoto" data-n="03"><b>Goat curry</b><small>Goat curry served with white rice. Gluten free.</small><em>$16.99</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="04"><b>Goat Thali</b><small>Rice platter with goat, cauliflower curry, mustard greens, black lentils, spicy tomato sauce and fermented radish pickle. Dine in only.</small><em>$19.99</em></div></div>
       </article>
+      
       
     </div>
   </div>
@@ -320,8 +329,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 <section class="grow" aria-label="Tasty Mo:Mo"><div class="grow-sticky">
-  <div class="grow-frame"><img src="img/fe9b081272.jpg" alt="Tasty Mo:Mo" loading="lazy"></div>
-  <div class="grow-word">Tasty Mo:Mo</div>
+  <div class="grow-frame"><img src="img/fe9b081272.jpg" alt="Tasty Mo:Mo" loading="lazy"><div class="grow-word">Tasty Mo:Mo</div></div>
   <div class="grow-cap"><span>4 min walk from Magoun Square</span><a class="btn" href="#visit" data-magnetic>Hours &amp; directions <span class="arr">→</span></a></div>
 </div></section>
 
@@ -464,7 +472,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     <div class="visit-grid">
       <div data-rise><h3>Find us</h3><p class="big">508 Medford Street</p><p style="margin-top:12px;opacity:.75">4 min walk from Magoun Square</p><p style="margin-top:18px"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Tasty%20Mo%3AMo%20508%20Medford%20Street" target="_blank" rel="noopener">Get directions →</a></p></div>
       <div data-rise><h3>Hours</h3><ul class="hours"><li><span>Mon</span><span>4 pm – 10:30 pm</span></li><li><span>Tue–Thu</span><span>12 pm – 10:30 pm</span></li><li><span>Fri–Sat</span><span>11:30 am – 10:30 pm</span></li><li><span>Sun</span><span>11:30 am – 10:15 pm</span></li></ul><p style="margin-top:16px"><span class="pill" data-open hidden><i></i><span></span></span></p></div>
-      <div data-rise><h3>Get in touch</h3><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"></div></div>
+      <div data-rise><h3>Get in touch</h3><p class="big"><a href="tel:+16177640222">(617) 764-0222</a></p><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"></div></div>
     </div>
   </div>
 </section>
@@ -472,14 +480,14 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 <div class="foot-wrap">
 <footer>
-  <div class="foot-cta"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tasty%20Mo%3AMo%20508%20Medford%20Street" target="_blank" rel="noopener">Directions</a></div>
+  <div class="foot-cta"><a class="btn" href="tel:+16177640222">Call (617) 764-0222</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tasty%20Mo%3AMo%20508%20Medford%20Street" target="_blank" rel="noopener">Directions</a></div>
   <div class="wordmark-xl" aria-hidden="true">Tasty Mo:Mo</div>
   <div class="wrap"><span>© 2026 Tasty Mo:Mo</span><span class="soc"><a href="https://www.instagram.com/tastymomo" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/tastymomo/" target="_blank" rel="noopener">Facebook</a></span></div>
 </footer>
 </div>
 
 <nav class="actionbar" aria-label="Quick actions">
-<a class="main" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Menu</span></a><a class="" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tasty%20Mo%3AMo%20508%20Medford%20Street" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+<a class="" href="tel:+16177640222"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Call</span></a><a class="main" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Menu</span></a><a class="" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tasty%20Mo%3AMo%20508%20Medford%20Street" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
 </nav>
 
 
@@ -501,6 +509,7 @@ addEventListener('scroll',chk,{passive:true});addEventListener('scroll',function
 
 
 <script>
+(function(){var h=document.querySelector('header.top');function sc(){h.classList.toggle('solid',scrollY>60)}addEventListener('scroll',sc,{passive:true});sc();})();
 (function(){
   var H={"0": [["11:30", "22:15"]], "1": [["16:00", "22:30"]], "2": [["12:00", "22:30"]], "3": [["12:00", "22:30"]], "4": [["12:00", "22:30"]], "5": [["11:30", "22:30"]], "6": [["11:30", "22:30"]]};
   var pills=document.querySelectorAll('[data-open]');
@@ -543,8 +552,6 @@ document.addEventListener('DOMContentLoaded',function(){
     gsap.ticker.lagSmoothing(0);
   }
 
-  /* header turns solid after the first screen's top */
-  ScrollTrigger.create({ start: 60, end: 'max', toggleClass: { targets: 'header.top', className: 'solid' } });
   /* offer pill appears once the visitor is past the first screen */
   var offer = document.getElementById('offer');
   if (offer) ScrollTrigger.create({ start: function () { return innerHeight * 0.9; }, end: 'max',
@@ -637,8 +644,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
     /* menu rows rise in */
     gsap.utils.toArray('.menu-sec').forEach(function (sec) {
-      gsap.from(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0, duration: 0.75, ease: 'expo.out', stagger: 0.03,
-        scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
+      gsap.fromTo(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.75, ease: 'expo.out', stagger: 0.03,
+        clearProps: 'opacity,visibility,transform', scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
     });
 
     /* odometer for years */
@@ -676,15 +683,15 @@ document.addEventListener('DOMContentLoaded',function(){
   mm.add(FINE, function () {
     var fig = document.querySelector('.peek');
     if (fig) {
-      var pics = JSON.parse(fig.dataset.pics || '[]'), img = fig.querySelector('img');
+      var img = fig.querySelector('img');
       gsap.set(fig, { xPercent: -50, yPercent: -50, scale: 0, autoAlpha: 1 });
       var x = gsap.quickTo(fig, 'x', { duration: 0.5, ease: 'power3' }), y = gsap.quickTo(fig, 'y', { duration: 0.5, ease: 'power3' }),
           r = gsap.quickTo(fig, 'rotation', { duration: 0.8, ease: 'power3' });
       var lx = 0;
       var move = function (e) { x(e.clientX + 150); y(e.clientY); r(gsap.utils.clamp(-14, 14, (e.clientX - lx) * 0.8)); lx = e.clientX; };
       addEventListener('pointermove', move);
-      document.querySelectorAll('.item').forEach(function (row, i) {
-        row.addEventListener('pointerenter', function () { if (!pics.length) return; img.src = pics[i % pics.length];
+      document.querySelectorAll('.item[data-peek]').forEach(function (row, i) {
+        row.addEventListener('pointerenter', function () { img.src = row.dataset.peek;
           gsap.to(fig, { scale: 1, duration: 0.45, ease: 'power3.out', overwrite: 'auto' }); });
         row.addEventListener('pointerleave', function () { gsap.to(fig, { scale: 0, duration: 0.3, ease: 'power2.in', overwrite: 'auto' }); });
       });

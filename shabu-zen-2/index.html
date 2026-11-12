@@ -75,13 +75,14 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .pill[hidden]{display:none}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(46,157,91,0)}100%{box-shadow:0 0 0 0 rgba(46,157,91,0)}}
 .badge{font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
-.odo{display:inline-flex;height:1em;line-height:1;overflow:hidden;vertical-align:-.12em}
-.odo-col{display:flex;flex-direction:column}.odo-col span{height:1em}
+.odo{display:inline-flex;height:1.2em;line-height:1.2;overflow:hidden;vertical-align:bottom}
+.odo-col{display:flex;flex-direction:column}.odo-col span{height:1.2em;line-height:1.2}
+[data-split]>div{padding-bottom:.14em;margin-bottom:-.14em}
 /* ---------- HERO (intro is pure CSS: moving on the first paint) ---------- */
 .hero{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero h1{font-size:clamp(2.9rem,8.56vw,11rem)}
 .hl{display:block;overflow:clip;padding-bottom:.07em;margin-bottom:-.07em}
-.hl>span{display:block;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
+.hl>span{display:block;text-wrap:balance;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
 @keyframes rise{from{transform:translateY(118%) rotate(3deg)}}
 .hero [data-in]{animation:fadeup .7s cubic-bezier(.215,.61,.355,1) both;animation-delay:calc(.75s + var(--i,0)*.07s)}
 .hero .eyebrow[data-in]{animation-delay:.12s}
@@ -98,6 +99,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero-media{container-type:size}
 .typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
+@media (max-width:768px){.hero{min-height:0;padding-bottom:100px!important}.hero .sub{font-size:1rem;margin-top:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.hero .actions{margin-top:18px}.hero .proof{font-size:1rem}}
 .a-market{--hdr:var(--on-accent);--hdr-btn-bg:var(--on-accent);--hdr-btn-fg:var(--accent)}
 .h-mk{display:flex;flex-direction:column}
 .h-mk .block{background:var(--accent);color:var(--on-accent);padding:116px 0 clamp(28px,4vw,52px)}
@@ -108,7 +110,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .h-mk .row2{display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;margin-top:26px}
 .h-mk .sub,.h-mk .actions{margin-top:0}
 .h-mk .btn{color:var(--on-accent)}
-.h-mk .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.h-mk .btn.primary{background:var(--accent2);border-color:var(--accent2);color:var(--ink)}
 .h-mk .stk{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}
 .sticker{display:inline-block;transform:rotate(var(--rot));background:var(--accent2);color:var(--ink);font-weight:800;font-size:.84rem;text-transform:uppercase;letter-spacing:.06em;padding:9px 14px;border-radius:9px;box-shadow:3px 3px 0 var(--ink)}
 .h-mk .strip{flex:1;min-height:36svh;border-bottom:4px solid var(--ink)}
@@ -126,11 +128,11 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 @keyframes mq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.mega .track{animation:none}}
 /* ---------- statement ---------- */
-.statement{padding:clamp(100px,14vw,200px) 0}
+.statement{padding:clamp(64px,8vw,120px) 0 clamp(32px,4vw,64px)}
 .statement p{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(2rem,4.6vw,4.4rem);line-height:1.08;max-width:22ch}
 .statement .eyebrow{display:block;margin-bottom:28px}
 /* ---------- dishes ---------- */
-.dishes{position:relative;padding:clamp(80px,10vw,140px) 0 clamp(60px,8vw,110px);overflow:hidden}
+.dishes{position:relative;padding:clamp(48px,6vw,96px) 0 clamp(60px,8vw,110px);overflow:hidden}
 .dishes .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:46px;position:relative;z-index:2}
 .dishes h2,.sec-title{font-size:clamp(2.6rem,6vw,5.6rem)}
 .hg{min-height:100svh;display:flex;align-items:center}
@@ -141,7 +143,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 html.mo .hg .dish-track{overflow:visible}
 .dish{flex:0 0 clamp(270px,27vw,410px);display:flex;flex-direction:column;gap:14px;scroll-snap-align:start}
 .dish .ph{position:relative;height:min(54svh,540px);border-radius:var(--r);overflow:hidden;background:var(--card)}
-.dish .ph img{position:absolute;inset:0 -8%;width:116%;height:100%;object-fit:cover}
+.dish .ph img{position:absolute;inset:0 -8%;width:116%;max-width:none;height:100%;object-fit:cover}
 .dish .num{position:absolute;top:16px;left:18px;font-family:var(--display);font-size:1.05rem;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}
 .dish .nophoto{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:clamp(22px,2.4vw,34px);height:100%;background:var(--accent2);color:var(--ink);position:relative;overflow:hidden}
 .dish .nophoto b{font-family:var(--display);font-weight:var(--dw);font-size:clamp(2rem,3vw,3.1rem);line-height:.96;letter-spacing:var(--dt)}
@@ -162,9 +164,10 @@ html.mo .hg .dish-track{overflow:visible}
 .grow{position:relative;z-index:2;height:220svh;background:var(--bg)}
 .grow-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .grow-frame{position:absolute;inset:0;clip-path:inset(22% 28% 22% 28% round 32px)}
-.grow-frame img{width:100%;height:100%;object-fit:cover}
+.grow-frame{display:flex;align-items:center;justify-content:center}
+.grow-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .grow-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5))}
-.grow-word{position:relative;z-index:2;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
+.grow-word{position:relative;z-index:2;max-width:100%;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
 .grow-cap{position:absolute;z-index:3;left:0;right:0;bottom:clamp(28px,7vh,80px);text-align:center;color:#fff;display:flex;flex-direction:column;align-items:center;gap:16px;font-size:1.05rem;padding:0 20px}
 .grow-cap .btn{color:#fff;border-color:rgba(255,255,255,.75)}
 .grow-cap .btn.primary{color:var(--on-accent);border-color:var(--accent)}
@@ -177,11 +180,12 @@ html.mo-off .grow{height:auto}html.mo-off .grow-sticky{position:relative}html.mo
 .menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;position:sticky;top:76px;z-index:5;background:var(--card);padding:12px 0}
 .menu-tabs a{text-decoration:none;font-size:.88rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);transition:background .25s,color .25s}
 .menu-tabs a:hover{background:var(--ink);color:var(--bg)}
+@media (max-width:768px){.menu-tabs{top:64px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad)) 28px;padding:10px var(--pad)}.menu-tabs::-webkit-scrollbar{display:none}.menu-tabs a{flex:none}}
 .menu-sec{margin-bottom:64px;scroll-margin-top:150px}
 .menu-sec h3{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(1.9rem,3.4vw,2.8rem);margin-bottom:10px}
 .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));column-gap:64px}
-.item{padding:18px 0;border-bottom:1px solid var(--line);transition:opacity .3s,padding .35s var(--ease)}
-@media (hover:hover){.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
+.item{padding:18px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease)}
+@media (hover:hover){.items:has(.item:hover) .item{transition:opacity .3s,padding .35s var(--ease)}.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
 .item .row{display:flex;align-items:baseline;gap:10px}
 .item .nm{font-weight:650;font-size:1.06rem}
 .item .nv{font-family:var(--script,var(--body));color:var(--accent);font-size:.92rem;margin-left:6px}
@@ -230,7 +234,8 @@ footer{position:fixed;left:0;bottom:0;width:100%;height:clamp(420px,72svh,760px)
 .foot-cta .btn{color:var(--on-accent)}
 .foot-cta .btn.primary{background:var(--on-accent);border-color:var(--on-accent);color:var(--accent)}
 .wordmark-xl{font-family:var(--display);font-weight:var(--dw);letter-spacing:-.045em;line-height:.8;font-size:min(16.56vw,24rem);white-space:nowrap;padding:0 var(--pad)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+footer .wrap{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+.foot-cta,.wordmark-xl{max-width:var(--maxw);margin-inline:auto;width:100%}
 footer .soc{display:flex;gap:20px}
 @media (max-width:768px){footer{padding-bottom:96px}.foot-wrap,footer{height:clamp(420px,70svh,640px)}}
 /* ---------- mobile action bar ---------- */
@@ -279,7 +284,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     <div class="wrap">
       <div class="top-line" data-in><span class="eyebrow">Hotpot · Allston</span><span class="native">霜降牛肉 · 雪花牛小排 · 四川麻辣湯</span></div>
       <h1 class="display"><span class="hl"><span style="--i:0">Hotpot on</span></span><span class="hl"><span style="--i:1">Brighton</span></span><span class="hl"><span style="--i:2">Avenue since 2003</span></span></h1>
-      <div class="row2"><p class="sub" data-in style="--i:1">We&#39;re in Allston, a 3-minute walk from Harvard Avenue station, serving lunch and dinner every day until late.</p><div class="actions" data-in style="--i:2"><a class="btn primary" href="tel:+16177828888" data-magnetic>Call (617) 782-8888</a><a class="btn" href="#menu">See the menu</a></div></div>
+      <div class="row2"><p class="sub" data-in style="--i:1">We’re in Allston, a 3-minute walk from Harvard Avenue station, serving lunch and dinner every day until late.</p><div class="actions" data-in style="--i:2"><a class="btn primary" href="tel:+16177828888" data-magnetic>Call (617) 782-8888</a><a class="btn" href="#menu">See the menu</a></div></div>
       <div class="stk" data-in style="--i:3"><span class="sticker" style="--rot:-5deg">Two locations</span><span class="sticker" style="--rot:4deg">Catering for up to 40</span><span class="pill" data-open hidden><i></i><span></span></span></div>
     </div>
   </div>
@@ -291,7 +296,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 
-<section class="statement"><div class="wrap"><span class="eyebrow">Hotpot · Allston</span><p data-fill>We opened in Allston in 2003. Today we have two locations, here on Brighton Avenue and at 16 Tyler Street in Boston.</p></div></section>
+<section class="statement"><div class="wrap"><span class="eyebrow">From the kitchen</span><p data-fill>We opened in Allston in 2003. Today we have two locations, here on Brighton Avenue and at 16 Tyler Street in Boston.</p></div></section>
 
 
 
@@ -306,36 +311,36 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
         
       </article>
       
+      
       <article class="dish"><div class="ph"><img src="img/ff1b69d986.jpg" alt="A2 Prime Grade Boneless Short Ribs Beef" loading="lazy"><span class="num">02</span></div>
         <div class="row"><h3>A2 Prime Grade Boneless Short Ribs Beef</h3><span class="price">Reg $35.00 / Jumbo $44.00</span></div><div class="native">雪花牛小排</div><p>A main course served with assorted vegetables and your choice of udon, vermicelli or rice.</p>
         
       </article>
+      
       
       <article class="dish"><div class="ph"><img src="img/40317d2ae1.jpg" alt="Miyazaki Wagyu A5 Grade" loading="lazy"><span class="num">03</span></div>
         <div class="row"><h3>Miyazaki Wagyu A5 Grade</h3><span class="price">$90.00</span></div><div class="native">頂級日本和牛</div><p>Imported from Japan. Striploin or ribeye.</p>
         
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="04"><span class="native">松板豬（面頰肉）</span><b>Ton-Toro Pork Cheek</b><small>Ordered a la carte for the pot.</small><em>$28.00</em></div></div>
       </article>
+      
       
       <article class="dish"><div class="ph"><div class="nophoto" data-n="05"><span class="native">海龍王盤</span><b>A12 Seafood Supreme</b><small>Scallop, shrimp, salmon, flounder, squid, clam, mussel and fish cake.</small><em>$32.00</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="06"><span class="native">餃子</span><b>Gyoza (6 PCS)</b><small>Seafood, pork or vegetable.</small><em>$9.00</em></div></div>
       </article>
+      
       
     </div>
   </div>
 </section>
 
 
-
-<section class="grow" aria-label="Shabu-Zen"><div class="grow-sticky">
-  <div class="grow-frame"><img src="img/40317d2ae1.jpg" alt="Shabu-Zen" loading="lazy"></div>
-  <div class="grow-word">Shabu-Zen</div>
-  <div class="grow-cap"><span>a 3-minute walk from Harvard Avenue station</span><a class="btn" href="#visit" data-magnetic>Hours &amp; directions <span class="arr">→</span></a></div>
-</div></section>
 
 
 
@@ -346,9 +351,9 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     
     <div class="menu-sec" id="m-1"><h3>Main Courses</h3>
       <div class="items">
-        <div class="item"><div class="row"><span class="nm">A1 Prime Grade Rib Eye Beef<span class="nv">霜降牛肉</span></span><span class="dots"></span><span class="pr">Reg $35.00 / Jumbo $44.00</span></div></div>
+        <div class="item" data-peek="img/6cfd8a616d.jpg"><div class="row"><span class="nm">A1 Prime Grade Rib Eye Beef<span class="nv">霜降牛肉</span></span><span class="dots"></span><span class="pr">Reg $35.00 / Jumbo $44.00</span></div></div>
       
-        <div class="item"><div class="row"><span class="nm">A2 Prime Grade Boneless Short Ribs Beef<span class="nv">雪花牛小排</span></span><span class="dots"></span><span class="pr">Reg $35.00 / Jumbo $44.00</span></div></div>
+        <div class="item" data-peek="img/ff1b69d986.jpg"><div class="row"><span class="nm">A2 Prime Grade Boneless Short Ribs Beef<span class="nv">雪花牛小排</span></span><span class="dots"></span><span class="pr">Reg $35.00 / Jumbo $44.00</span></div></div>
       
         <div class="item"><div class="row"><span class="nm">A3 Prime Grade Sirloin Beef<span class="nv">沙朗牛肉</span></span><span class="dots"></span><span class="pr">Reg $31.00 / Jumbo $40.00</span></div></div>
       
@@ -494,7 +499,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     
     <p class="menu-note"><a href="https://www.shabuzen.com/menu" target="_blank" rel="noopener">Full menu →</a></p>
   </div>
-  <div class="peek" data-pics='["img/6cfd8a616d.jpg", "img/ff1b69d986.jpg", "img/40317d2ae1.jpg", "img/5930825b56.jpg", "img/66b5883214.jpg", "img/08efbba00c.jpg"]' aria-hidden="true"><img alt=""></div>
+  <div class="peek" aria-hidden="true"><img alt=""></div>
 </section>
 
 
@@ -557,6 +562,7 @@ addEventListener('scroll',chk,{passive:true});addEventListener('scroll',function
 
 
 <script>
+(function(){var h=document.querySelector('header.top');function sc(){h.classList.toggle('solid',scrollY>60)}addEventListener('scroll',sc,{passive:true});sc();})();
 (function(){
   var H={"0": [["11:30", "22:30"]], "1": [["11:30", "22:30"]], "2": [["11:30", "22:30"]], "3": [["11:30", "22:30"]], "4": [["11:30", "22:30"]], "5": [["11:30", "23:15"]], "6": [["11:30", "23:15"]]};
   var pills=document.querySelectorAll('[data-open]');
@@ -599,8 +605,6 @@ document.addEventListener('DOMContentLoaded',function(){
     gsap.ticker.lagSmoothing(0);
   }
 
-  /* header turns solid after the first screen's top */
-  ScrollTrigger.create({ start: 60, end: 'max', toggleClass: { targets: 'header.top', className: 'solid' } });
   /* offer pill appears once the visitor is past the first screen */
   var offer = document.getElementById('offer');
   if (offer) ScrollTrigger.create({ start: function () { return innerHeight * 0.9; }, end: 'max',
@@ -693,8 +697,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
     /* menu rows rise in */
     gsap.utils.toArray('.menu-sec').forEach(function (sec) {
-      gsap.from(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0, duration: 0.75, ease: 'expo.out', stagger: 0.03,
-        scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
+      gsap.fromTo(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.75, ease: 'expo.out', stagger: 0.03,
+        clearProps: 'opacity,visibility,transform', scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
     });
 
     /* odometer for years */
@@ -732,15 +736,15 @@ document.addEventListener('DOMContentLoaded',function(){
   mm.add(FINE, function () {
     var fig = document.querySelector('.peek');
     if (fig) {
-      var pics = JSON.parse(fig.dataset.pics || '[]'), img = fig.querySelector('img');
+      var img = fig.querySelector('img');
       gsap.set(fig, { xPercent: -50, yPercent: -50, scale: 0, autoAlpha: 1 });
       var x = gsap.quickTo(fig, 'x', { duration: 0.5, ease: 'power3' }), y = gsap.quickTo(fig, 'y', { duration: 0.5, ease: 'power3' }),
           r = gsap.quickTo(fig, 'rotation', { duration: 0.8, ease: 'power3' });
       var lx = 0;
       var move = function (e) { x(e.clientX + 150); y(e.clientY); r(gsap.utils.clamp(-14, 14, (e.clientX - lx) * 0.8)); lx = e.clientX; };
       addEventListener('pointermove', move);
-      document.querySelectorAll('.item').forEach(function (row, i) {
-        row.addEventListener('pointerenter', function () { if (!pics.length) return; img.src = pics[i % pics.length];
+      document.querySelectorAll('.item[data-peek]').forEach(function (row, i) {
+        row.addEventListener('pointerenter', function () { img.src = row.dataset.peek;
           gsap.to(fig, { scale: 1, duration: 0.45, ease: 'power3.out', overwrite: 'auto' }); });
         row.addEventListener('pointerleave', function () { gsap.to(fig, { scale: 0, duration: 0.3, ease: 'power2.in', overwrite: 'auto' }); });
       });

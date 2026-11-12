@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Alcove | Coastal New England Restaurant at Lovejoy Wharf, Boston</title>
-<meta name="description" content="Tuna tartare, New England oysters and fish + chips on the waterfront at Lovejoy Wharf, next to North Station and TD Garden in Boston&#39;s West End.">
+<meta name="description" content="Tuna tartare, New England oysters and fish + chips on the waterfront at Lovejoy Wharf, next to North Station and TD Garden in Boston’s West End.">
 <meta name="theme-color" content="#F7F3EC">
 <meta property="og:title" content="Alcove | Coastal New England Restaurant at Lovejoy Wharf, Boston">
-<meta property="og:description" content="Tuna tartare, New England oysters and fish + chips on the waterfront at Lovejoy Wharf, next to North Station and TD Garden in Boston&#39;s West End.">
+<meta property="og:description" content="Tuna tartare, New England oysters and fish + chips on the waterfront at Lovejoy Wharf, next to North Station and TD Garden in Boston’s West End.">
 <meta property="og:image" content="img/3f27b875bb.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,13 +75,14 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .pill[hidden]{display:none}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(46,157,91,0)}100%{box-shadow:0 0 0 0 rgba(46,157,91,0)}}
 .badge{font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
-.odo{display:inline-flex;height:1em;line-height:1;overflow:hidden;vertical-align:-.12em}
-.odo-col{display:flex;flex-direction:column}.odo-col span{height:1em}
+.odo{display:inline-flex;height:1.2em;line-height:1.2;overflow:hidden;vertical-align:bottom}
+.odo-col{display:flex;flex-direction:column}.odo-col span{height:1.2em;line-height:1.2}
+[data-split]>div{padding-bottom:.14em;margin-bottom:-.14em}
 /* ---------- HERO (intro is pure CSS: moving on the first paint) ---------- */
 .hero{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero h1{font-size:clamp(2.9rem,7.0vw,11rem)}
 .hl{display:block;overflow:clip;padding-bottom:.07em;margin-bottom:-.07em}
-.hl>span{display:block;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
+.hl>span{display:block;text-wrap:balance;transform-origin:0 100%;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i)*.085s)}
 @keyframes rise{from{transform:translateY(118%) rotate(3deg)}}
 .hero [data-in]{animation:fadeup .7s cubic-bezier(.215,.61,.355,1) both;animation-delay:calc(.75s + var(--i,0)*.07s)}
 .hero .eyebrow[data-in]{animation-delay:.12s}
@@ -98,6 +99,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero-media{container-type:size}
 .typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
+@media (max-width:768px){.hero{min-height:0;padding-bottom:100px!important}.hero .sub{font-size:1rem;margin-top:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.hero .actions{margin-top:18px}.hero .proof{font-size:1rem}}
 .h-ed{display:flex;align-items:center;padding:112px 0 48px}
 .h-ed .grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(30px,5vw,90px);align-items:end;width:100%}
 .h-ed h1{margin-top:22px;font-weight:400;letter-spacing:-.025em;line-height:.92}
@@ -114,11 +116,11 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 @keyframes mq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.mega .track{animation:none}}
 /* ---------- statement ---------- */
-.statement{padding:clamp(100px,14vw,200px) 0}
+.statement{padding:clamp(64px,8vw,120px) 0 clamp(32px,4vw,64px)}
 .statement p{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(2rem,4.6vw,4.4rem);line-height:1.08;max-width:22ch}
 .statement .eyebrow{display:block;margin-bottom:28px}
 /* ---------- dishes ---------- */
-.dishes{position:relative;padding:clamp(80px,10vw,140px) 0 clamp(60px,8vw,110px);overflow:hidden}
+.dishes{position:relative;padding:clamp(48px,6vw,96px) 0 clamp(60px,8vw,110px);overflow:hidden}
 .dishes .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:46px;position:relative;z-index:2}
 .dishes h2,.sec-title{font-size:clamp(2.6rem,6vw,5.6rem)}
 .hg{min-height:100svh;display:flex;align-items:center}
@@ -129,7 +131,7 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 html.mo .hg .dish-track{overflow:visible}
 .dish{flex:0 0 clamp(270px,27vw,410px);display:flex;flex-direction:column;gap:14px;scroll-snap-align:start}
 .dish .ph{position:relative;height:min(54svh,540px);border-radius:var(--r);overflow:hidden;background:var(--card)}
-.dish .ph img{position:absolute;inset:0 -8%;width:116%;height:100%;object-fit:cover}
+.dish .ph img{position:absolute;inset:0 -8%;width:116%;max-width:none;height:100%;object-fit:cover}
 .dish .num{position:absolute;top:16px;left:18px;font-family:var(--display);font-size:1.05rem;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}
 .dish .nophoto{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:clamp(22px,2.4vw,34px);height:100%;background:var(--accent2);color:var(--ink);position:relative;overflow:hidden}
 .dish .nophoto b{font-family:var(--display);font-weight:var(--dw);font-size:clamp(2rem,3vw,3.1rem);line-height:.96;letter-spacing:var(--dt)}
@@ -150,9 +152,10 @@ html.mo .hg .dish-track{overflow:visible}
 .grow{position:relative;z-index:2;height:220svh;background:var(--bg)}
 .grow-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .grow-frame{position:absolute;inset:0;clip-path:inset(22% 28% 22% 28% round 32px)}
-.grow-frame img{width:100%;height:100%;object-fit:cover}
+.grow-frame{display:flex;align-items:center;justify-content:center}
+.grow-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .grow-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5))}
-.grow-word{position:relative;z-index:2;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
+.grow-word{position:relative;z-index:2;max-width:100%;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(3.4rem,15.5vw,16rem);line-height:.86;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.35);text-align:center;padding:0 3vw;text-wrap:balance}
 .grow-cap{position:absolute;z-index:3;left:0;right:0;bottom:clamp(28px,7vh,80px);text-align:center;color:#fff;display:flex;flex-direction:column;align-items:center;gap:16px;font-size:1.05rem;padding:0 20px}
 .grow-cap .btn{color:#fff;border-color:rgba(255,255,255,.75)}
 .grow-cap .btn.primary{color:var(--on-accent);border-color:var(--accent)}
@@ -165,11 +168,12 @@ html.mo-off .grow{height:auto}html.mo-off .grow-sticky{position:relative}html.mo
 .menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;position:sticky;top:76px;z-index:5;background:var(--card);padding:12px 0}
 .menu-tabs a{text-decoration:none;font-size:.88rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);transition:background .25s,color .25s}
 .menu-tabs a:hover{background:var(--ink);color:var(--bg)}
+@media (max-width:768px){.menu-tabs{top:64px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad)) 28px;padding:10px var(--pad)}.menu-tabs::-webkit-scrollbar{display:none}.menu-tabs a{flex:none}}
 .menu-sec{margin-bottom:64px;scroll-margin-top:150px}
 .menu-sec h3{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dt);font-size:clamp(1.9rem,3.4vw,2.8rem);margin-bottom:10px}
 .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));column-gap:64px}
-.item{padding:18px 0;border-bottom:1px solid var(--line);transition:opacity .3s,padding .35s var(--ease)}
-@media (hover:hover){.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
+.item{padding:18px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease)}
+@media (hover:hover){.items:has(.item:hover) .item{transition:opacity .3s,padding .35s var(--ease)}.items:has(.item:hover) .item:not(:hover){opacity:.35}.item:hover{padding-left:10px}}
 .item .row{display:flex;align-items:baseline;gap:10px}
 .item .nm{font-weight:650;font-size:1.06rem}
 .item .nv{font-family:var(--script,var(--body));color:var(--accent);font-size:.92rem;margin-left:6px}
@@ -218,7 +222,8 @@ footer{position:fixed;left:0;bottom:0;width:100%;height:clamp(420px,72svh,760px)
 .foot-cta .btn{color:var(--on-accent)}
 .foot-cta .btn.primary{background:var(--on-accent);border-color:var(--on-accent);color:var(--accent)}
 .wordmark-xl{font-family:var(--display);font-weight:var(--dw);letter-spacing:-.045em;line-height:.8;font-size:min(24vw,24rem);white-space:nowrap;padding:0 var(--pad)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+footer .wrap{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.88rem;opacity:.8;margin-top:24px}
+.foot-cta,.wordmark-xl{max-width:var(--maxw);margin-inline:auto;width:100%}
 footer .soc{display:flex;gap:20px}
 @media (max-width:768px){footer{padding-bottom:96px}.foot-wrap,footer{height:clamp(420px,70svh,640px)}}
 /* ---------- mobile action bar ---------- */
@@ -267,7 +272,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     <div class="txt">
       <span class="eyebrow" data-in>Coastal New England · Lovejoy Wharf</span>
       <h1 class="display"><span class="hl"><span style="--i:0">$1</span></span><span class="hl"><span style="--i:1">Oysters</span></span><span class="hl"><span style="--i:2">on</span></span><span class="hl"><span style="--i:3">Lovejoy Wharf, 3 to 5</span></span></h1><p class="proof" data-in style="--i:0">Wine Spectator award-winning wine list</p>
-      <p class="sub" data-in style="--i:1">We&#39;re on the water next to North Station and TD Garden in the West End, so come weekdays between 3 and 5 for oysters, or stay for the sunset on the patio.</p>
+      <p class="sub" data-in style="--i:1">We’re on the water next to North Station and TD Garden in the West End, so come weekdays between 3 and 5 for oysters, or stay for the sunset on the patio.</p>
       <div class="actions" data-in style="--i:2"><a class="btn primary" href="http://www.opentable.com/restaurant/profile/1023889/reserve?rid=1023889&amp;restref=1023889" target="_blank" rel="noopener" data-magnetic>Book a table <span class="arr">→</span></a><a class="btn" href="#menu">See the menu</a><a class="btn" href="https://www.toasttab.com/alcove/v3" target="_blank" rel="noopener">Order pickup</a></div>
       <div class="meta" data-in style="--i:3"><span class="pill" data-open hidden><i></i><span></span></span><span class="badge">Waterfront patio</span><span class="badge">Line-caught seafood</span></div>
     </div>
@@ -280,33 +285,39 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 
-<section class="statement"><div class="wrap"><span class="eyebrow">Coastal New England · Lovejoy Wharf</span><p data-fill>Alcove sits on Lovejoy Wharf, next to TD Garden and North Station in Boston&#39;s West End. We host date nights, pre-game meetups, business lunches and dinner parties.</p></div></section>
+<section class="statement"><div class="wrap"><span class="eyebrow">Who we are</span><p data-fill>Alcove sits on Lovejoy Wharf, next to TD Garden and North Station in Boston’s West End. We host date nights, pre-game meetups, business lunches and dinner parties.</p></div></section>
 
 
 
 <section id="menu" class="dishes hg">
   <div class="hg-giant" aria-hidden="true">Alcove</div>
   <div class="inner">
-    <div class="wrap head"><div><span class="eyebrow">Where to start</span><h2 class="display" data-split style="margin-top:14px">What we&#39;re sending out of the kitchen</h2></div></div>
+    <div class="wrap head"><div><span class="eyebrow">Where to start</span><h2 class="display" data-split style="margin-top:14px">What we’re sending out of the kitchen</h2></div></div>
     <div class="dish-track">
       
       <article class="dish"><div class="ph"><div class="nophoto" data-n="01"><b>Tuna Tartare*</b><small>Avocado, ponzu and crispy shallot.</small><em>$22</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="02"><b>New England Oysters*</b><small>Cocktail sauce and mignonette. Priced at 6 each on the lunch menu, and $1 each weekdays from 3 to 5 pm.</small><em>$24</em></div></div>
       </article>
+      <article class="dish filler" aria-hidden="true"><div class="ph"><img src="img/068d6d66a0.jpg" alt="" loading="lazy"></div></article>
       
       <article class="dish"><div class="ph"><div class="nophoto" data-n="03"><b>Fish + Chips</b><small>Served with tartar sauce. $16 for the small, $32 for the large.</small><em>$16/32</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="04"><b>Shrimp Tacos</b><small>Pickled cabbage slaw, avocado mousse and a green salad.</small><em>$18</em></div></div>
       </article>
+      <article class="dish filler" aria-hidden="true"><div class="ph"><img src="img/29f2b3432a.jpg" alt="" loading="lazy"></div></article>
       
       <article class="dish"><div class="ph"><div class="nophoto" data-n="05"><b>Alcove Burger*</b><small>Cheddar cheese, bacon, caramelized onion and b + b pickles.</small><em>$25</em></div></div>
       </article>
       
+      
       <article class="dish"><div class="ph"><div class="nophoto" data-n="06"><b>Half Chicken</b><small>Fennel pollen and jus.</small><em>$33</em></div></div>
       </article>
+      
       
     </div>
   </div>
@@ -315,8 +326,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 <section class="grow" aria-label="Alcove"><div class="grow-sticky">
-  <div class="grow-frame"><img src="img/52a748bc99.jpg" alt="Alcove" loading="lazy"></div>
-  <div class="grow-word">Alcove</div>
+  <div class="grow-frame"><img src="img/52a748bc99.jpg" alt="Alcove" loading="lazy"><div class="grow-word">Alcove</div></div>
   <div class="grow-cap"><span>a 3-minute walk from North Station (Orange Line, Green Line, commuter rail)</span><a class="btn primary" href="http://www.opentable.com/restaurant/profile/1023889/reserve?rid=1023889&amp;restref=1023889" target="_blank" rel="noopener" data-magnetic>Book a table <span class="arr">→</span></a></div>
 </div></section>
 
@@ -429,7 +439,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
     
     <p class="menu-note"><a href="https://alcoveboston.com/wp-content/uploads/2026/09/ALC_LUNCH_9_14_26.pdf" target="_blank" rel="noopener">Full menu →</a></p>
   </div>
-  <div class="peek" data-pics='["img/068d6d66a0.jpg", "img/29f2b3432a.jpg", "img/d07b6edffb.jpg", "img/8d13979f54.jpg", "img/f55a508581.jpg"]' aria-hidden="true"><img alt=""></div>
+  
 </section>
 
 
@@ -444,7 +454,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
 
 
 <section class="gal" aria-label="Photos">
-  <div class="wrap"><div class="gallery"><figure data-curtain="up"><img src="img/068d6d66a0.jpg" alt="Alcove" loading="lazy" data-parallax="8"></figure><figure data-curtain="left"><img src="img/29f2b3432a.jpg" alt="Alcove" loading="lazy" data-parallax="12"></figure><figure data-curtain="right"><img src="img/d07b6edffb.jpg" alt="Alcove" loading="lazy" data-parallax="10"></figure><figure data-curtain="down"><img src="img/8d13979f54.jpg" alt="Alcove" loading="lazy" data-parallax="12"></figure><figure data-curtain="up"><img src="img/f55a508581.jpg" alt="Alcove" loading="lazy" data-parallax="8"></figure></div></div>
+  <div class="wrap"><div class="gallery"><figure data-curtain="up"><img src="img/d07b6edffb.jpg" alt="Alcove" loading="lazy" data-parallax="8"></figure><figure data-curtain="left"><img src="img/8d13979f54.jpg" alt="Alcove" loading="lazy" data-parallax="12"></figure><figure data-curtain="right"><img src="img/f55a508581.jpg" alt="Alcove" loading="lazy" data-parallax="10"></figure></div></div>
 </section>
 
 
@@ -492,6 +502,7 @@ addEventListener('scroll',chk,{passive:true});addEventListener('scroll',function
 
 
 <script>
+(function(){var h=document.querySelector('header.top');function sc(){h.classList.toggle('solid',scrollY>60)}addEventListener('scroll',sc,{passive:true});sc();})();
 (function(){
   var H={"0": [["11:00", "22:00"]], "1": [["12:00", "22:00"]], "2": [["12:00", "22:00"]], "3": [["12:00", "22:00"]], "4": [["12:00", "22:00"]], "5": [["12:00", "22:00"]], "6": [["11:00", "22:00"]]};
   var pills=document.querySelectorAll('[data-open]');
@@ -534,8 +545,6 @@ document.addEventListener('DOMContentLoaded',function(){
     gsap.ticker.lagSmoothing(0);
   }
 
-  /* header turns solid after the first screen's top */
-  ScrollTrigger.create({ start: 60, end: 'max', toggleClass: { targets: 'header.top', className: 'solid' } });
   /* offer pill appears once the visitor is past the first screen */
   var offer = document.getElementById('offer');
   if (offer) ScrollTrigger.create({ start: function () { return innerHeight * 0.9; }, end: 'max',
@@ -628,8 +637,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
     /* menu rows rise in */
     gsap.utils.toArray('.menu-sec').forEach(function (sec) {
-      gsap.from(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0, duration: 0.75, ease: 'expo.out', stagger: 0.03,
-        scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
+      gsap.fromTo(sec.querySelectorAll('.item'), { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.75, ease: 'expo.out', stagger: 0.03,
+        clearProps: 'opacity,visibility,transform', scrollTrigger: { trigger: sec, start: 'top 84%', once: true } });
     });
 
     /* odometer for years */
@@ -667,15 +676,15 @@ document.addEventListener('DOMContentLoaded',function(){
   mm.add(FINE, function () {
     var fig = document.querySelector('.peek');
     if (fig) {
-      var pics = JSON.parse(fig.dataset.pics || '[]'), img = fig.querySelector('img');
+      var img = fig.querySelector('img');
       gsap.set(fig, { xPercent: -50, yPercent: -50, scale: 0, autoAlpha: 1 });
       var x = gsap.quickTo(fig, 'x', { duration: 0.5, ease: 'power3' }), y = gsap.quickTo(fig, 'y', { duration: 0.5, ease: 'power3' }),
           r = gsap.quickTo(fig, 'rotation', { duration: 0.8, ease: 'power3' });
       var lx = 0;
       var move = function (e) { x(e.clientX + 150); y(e.clientY); r(gsap.utils.clamp(-14, 14, (e.clientX - lx) * 0.8)); lx = e.clientX; };
       addEventListener('pointermove', move);
-      document.querySelectorAll('.item').forEach(function (row, i) {
-        row.addEventListener('pointerenter', function () { if (!pics.length) return; img.src = pics[i % pics.length];
+      document.querySelectorAll('.item[data-peek]').forEach(function (row, i) {
+        row.addEventListener('pointerenter', function () { img.src = row.dataset.peek;
           gsap.to(fig, { scale: 1, duration: 0.45, ease: 'power3.out', overwrite: 'auto' }); });
         row.addEventListener('pointerleave', function () { gsap.to(fig, { scale: 0, duration: 0.3, ease: 'power2.in', overwrite: 'auto' }); });
       });

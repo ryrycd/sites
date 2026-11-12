@@ -95,7 +95,8 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero .proof{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.1rem,1.6vw,1.45rem);margin-top:14px;opacity:.92}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .hero .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:clamp(4rem,20vw,20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
+.hero-media{container-type:size}
+.typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
 .h-cf{padding:90px 0 24px;display:flex;align-items:stretch}
 .h-cf .wrap{width:100%;display:flex}
@@ -276,7 +277,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
         <div class="actions" data-in style="--i:2"><a class="btn primary" href="https://pos.toasttab.com/privacy" target="_blank" rel="noopener" data-magnetic>Order pickup <span class="arr">→</span></a><a class="btn" href="#menu">See the menu</a></div>
         <div class="meta" data-in style="--i:3"><span class="pill" data-open hidden><i></i><span></span></span><span class="badge">Catering available</span><span class="badge">Bakey Rewards app</span><span class="badge">Open daily</span></div>
       </div>
-      <div class="hero-media" style="--clip0:inset(0% 0% 0% 100%)"><div class="typo-hero">Babka</div></div>
+      <div class="hero-media" style="--clip0:inset(0% 0% 0% 100%)"><div class="typo-hero" style="--n:5">Babka</div></div>
     </div>
   </div>
 </section>

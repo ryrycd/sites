@@ -95,7 +95,8 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero .proof{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.1rem,1.6vw,1.45rem);margin-top:14px;opacity:.92}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .hero .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:clamp(4rem,20vw,20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
+.hero-media{container-type:size}
+.typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
 .a-market{--hdr:var(--on-accent);--hdr-btn-bg:var(--on-accent);--hdr-btn-fg:var(--accent)}
 .h-mk{display:flex;flex-direction:column}
@@ -282,7 +283,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
       <div class="stk" data-in style="--i:3"><span class="sticker" style="--rot:-5deg">Live seafood</span><span class="sticker" style="--rot:4deg">Open daily until midnight</span><span class="sticker" style="--rot:-2deg">Family style</span><span class="pill" data-open hidden><i></i><span></span></span></div>
     </div>
   </div>
-  <div class="hero-media strip" style="--clip0:inset(100% 0% 0% 0%)"><div class="typo-hero">Lobster</div></div>
+  <div class="hero-media strip" style="--clip0:inset(100% 0% 0% 0%)"><div class="typo-hero" style="--n:7">Lobster</div></div>
 </section>
 
 

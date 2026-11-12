@@ -95,7 +95,8 @@ header.top:not(.solid) .top-cta .btn.primary{background:var(--hdr-btn-bg,var(--a
 .hero .proof{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.1rem,1.6vw,1.45rem);margin-top:14px;opacity:.92}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .hero .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:clamp(4rem,20vw,20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
+.hero-media{container-type:size}
+.typo-hero{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:var(--dw);font-size:min(175cqi / var(--n), 60cqh, 20rem);letter-spacing:-.04em;line-height:.8;text-align:center;overflow:hidden;padding:4vw}
 @media (prefers-reduced-motion:reduce){.hero *,.hero-media,header.top{animation:none!important}}
 .h-tr{background:var(--accent2);display:flex;align-items:center;padding:112px 0 70px}
 .h-tr .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,90px);align-items:center;width:100%}
@@ -279,7 +280,7 @@ html.mo-off .offer.min{opacity:1;transform:none;pointer-events:auto}
       <div class="meta" data-in style="--i:3"><span class="pill" data-open hidden><i></i><span></span></span><span class="badge">Pizza &amp; subs</span><span class="badge">Daily specials</span></div>
     </div>
     <div class="art">
-      <div class="hero-media rect" style="--clip0:inset(100% 0% 0% 0%)"><div class="typo-hero">Caesar&#39;s</div></div>
+      <div class="hero-media rect" style="--clip0:inset(100% 0% 0% 0%)"><div class="typo-hero" style="--n:8">Caesar&#39;s</div></div>
       <svg class="badge-rot" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="c" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs><circle cx="100" cy="100" r="98"/><text><textPath href="#c">Pizza &amp; subs · Pizza &amp; subs · Pizza &amp; subs · </textPath></text></svg>
     </div>
   </div>

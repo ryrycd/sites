@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Michette | Bakery in Somerville, MA</title>
+<meta name="description" content="Sourdough, Lemon Poppy Kouign-amann and Cardamom Buns on Broadway in Somerville. Order ahead for pickup at Michette.">
+<meta name="theme-color" content="#fff8f0">
+<meta property="og:title" content="Michette | Bakery in Somerville, MA">
+<meta property="og:description" content="Sourdough, Lemon Poppy Kouign-amann and Cardamom Buns on Broadway in Somerville. Order ahead for pickup at Michette.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap" rel="stylesheet">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Bakery", "name": "Michette", "address": "164 Broadway Somerville", "geo": {"@type": "GeoCoordinates", "latitude": 42.38849, "longitude": -71.085886}, "telephone": "+16172015873"}</script>
+<style>
+:root{
+  --bg:#fff8f0;--ink:#2b1a10;--accent:#c2571a;--accent2:#fcd9bf;--muted:#7a5238;
+  --card:#fffcf8;--line:#ddd4cc;--on-accent:#ffffff;
+  --display:'Fraunces',Georgia,serif;--body:'DM Sans',system-ui,-apple-system,sans-serif;
+  
+  --r:22px;--maxw:1240px;--pad:clamp(20px,4.5vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.display{font-family:var(--display);font-weight:600;letter-spacing:-0.02em;line-height:.98}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:.85em 1.4em;border-radius:var(--r);font-weight:600;font-size:.98rem;text-decoration:none;border:1.5px solid var(--ink);transition:transform .2s ease,background .2s ease,color .2s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.ghost{background:transparent}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+/* preview ribbon */
+.ribbon{background:#111;color:#f4f1ea;font:500 12.5px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px;letter-spacing:.01em}
+.ribbon b{color:#fff}
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:40px;width:auto;max-width:150px;object-fit:contain}
+.brand .wordmark{font-family:var(--display);font-weight:600;font-size:1.35rem;letter-spacing:-0.02em;line-height:1}
+nav.links{display:flex;gap:26px;font-size:.95rem;font-weight:500}
+nav.links a{text-decoration:none;opacity:.8}
+nav.links a:hover{opacity:1}
+.top-cta{display:flex;gap:10px}
+.top-cta .btn{min-height:42px;padding:.6em 1.1em;font-size:.9rem}
+@media (max-width:860px){nav.links,.top-cta{display:none}}
+/* open pill */
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;padding:7px 13px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+.pill i{width:8px;height:8px;border-radius:50%;background:#2e9d5b;box-shadow:0 0 0 4px rgba(46,157,91,.18)}
+.pill.closed i{background:#c4553a;box-shadow:0 0 0 4px rgba(196,85,58,.16)}
+.pill[hidden]{display:none}
+/* hero (shared parts) */
+.hero{position:relative;overflow:hidden;padding:0}
+.hero h1{font-size:clamp(2.7rem,7.4vw,6.4rem)}
+.hero .sub{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:34ch;margin-top:22px;opacity:.88}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;align-items:center}
+.hero-img{width:100%;height:100%;object-fit:cover}
+.h-long .hero h1{font-size:clamp(2.4rem,5.6vw,5rem)!important}
+.h-xlong .hero h1{font-size:clamp(2.1rem,4.4vw,4rem)!important}
+.h-long.a-market .hero h1,.h-long.a-counter .hero h1{font-size:clamp(2.6rem,7.2vw,7rem)!important}
+.h-xlong.a-market .hero h1,.h-xlong.a-counter .hero h1{font-size:clamp(2.3rem,5.6vw,5.4rem)!important}
+/* marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--accent);color:var(--on-accent)}
+.marquee .track{display:flex;width:max-content;animation:mq 46s linear infinite}
+.marquee span{font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,2vw,1.6rem);padding:14px 0;white-space:nowrap;letter-spacing:-0.02em}
+.marquee span::after{content:"✦";margin:0 28px;opacity:.7;font-family:system-ui}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:clamp(72px,10vw,132px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2.2rem,4.8vw,3.8rem)}
+.sec-label{display:block;margin-bottom:14px}
+/* signatures */
+.sigs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.sig{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.sig .ph{aspect-ratio:4/3;overflow:hidden;background:var(--line)}
+.sig .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.sig:hover .ph img{transform:scale(1.04)}
+.sig .bd{padding:20px 22px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.sig h3{font-family:var(--display);font-weight:600;font-size:1.45rem;line-height:1.1;letter-spacing:-0.02em}
+.sig .native{font-family:var(--script,var(--body));font-size:.95rem;color:var(--accent)}
+.sig p{font-size:.95rem;opacity:.8}
+.sig .price{margin-top:auto;padding-top:10px;font-weight:700}
+/* menu */
+.menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px;position:sticky;top:68px;z-index:5;background:var(--bg);padding:12px 0}
+.menu-tabs a{text-decoration:none;font-size:.9rem;font-weight:600;padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.menu-tabs a:hover{border-color:var(--ink)}
+.menu-sec{margin-bottom:54px;scroll-margin-top:140px}
+.menu-sec h3{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:18px;letter-spacing:-0.02em}
+.items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));column-gap:56px}
+.item{padding:16px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.item .row{display:flex;align-items:baseline;gap:10px}
+.item .nm{font-weight:650;font-size:1.03rem}
+.item .nv{font-family:var(--script,var(--body));color:var(--accent);font-size:.9rem;margin-left:6px}
+.item .dots{flex:1;border-bottom:1.5px dotted var(--line);transform:translateY(-4px);min-width:16px}
+.item .pr{font-weight:650;font-variant-numeric:tabular-nums}
+.item .ds{font-size:.92rem;opacity:.75;margin-top:4px;max-width:58ch}
+.tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:5px;background:var(--accent2);color:var(--ink);margin-left:6px;vertical-align:2px;opacity:.9}
+.menu-note{font-size:.95rem;opacity:.75;margin-top:8px}
+/* story */
+.story-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.story-grid .ph{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--line)}
+.story-grid .ph img{width:100%;height:100%;object-fit:cover}
+.story h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:26px}
+.story p{font-size:1.08rem;margin-bottom:16px;max-width:52ch}
+@media (max-width:860px){.story-grid{grid-template-columns:1fr}}
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(120px,16vw,220px);gap:12px}
+.gallery figure{overflow:hidden;border-radius:var(--r);background:var(--line)}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery figure:nth-child(1){grid-column:span 7;grid-row:span 2}
+.gallery figure:nth-child(2){grid-column:span 5}
+.gallery figure:nth-child(3){grid-column:span 5}
+.gallery figure:nth-child(4){grid-column:span 4}
+.gallery figure:nth-child(5){grid-column:span 8}
+@media (max-width:700px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.gallery figure{grid-column:span 1!important;grid-row:span 1!important}.gallery figure:nth-child(1){grid-column:span 2!important;grid-row:span 2!important}}
+/* visit */
+.visit{background:var(--card);border-top:1px solid var(--line)}
+.visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.visit h3{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;color:var(--muted)}
+.visit .big{font-family:var(--display);font-weight:600;font-size:1.7rem;line-height:1.15;letter-spacing:-0.02em}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:20px;padding:8px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.hours li.today{font-weight:700}
+.visit a{text-decoration-color:var(--accent);text-underline-offset:4px}
+footer{padding:42px 0 120px;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;opacity:.75}
+footer .soc{display:flex;gap:18px}
+/* mobile action bar */
+.actionbar{display:none}
+@media (max-width:768px){
+  .actionbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:40;background:var(--ink);border-radius:18px;padding:6px;gap:6px;box-shadow:0 12px 32px rgba(0,0,0,.28)}
+  .actionbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:52px;border-radius:13px;color:var(--bg);text-decoration:none;font-size:.78rem;font-weight:650}
+  .actionbar a.main{background:var(--accent);color:var(--on-accent)}
+  .actionbar svg{width:20px;height:20px}
+}
+/* the "make it live" card */
+.offer{position:fixed;right:18px;bottom:18px;z-index:50;width:min(360px,calc(100vw - 36px));background:#fffdf8;color:#1b1a17;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.28);font:15px/1.45 system-ui,-apple-system,sans-serif;padding:20px 20px 18px;border:1px solid rgba(0,0,0,.08)}
+.offer h4{font-size:16px;margin-bottom:8px;letter-spacing:-.01em}
+.offer ul{list-style:none;margin:10px 0 14px;display:grid;gap:5px;font-size:13.5px}
+.offer li::before{content:"✓";color:#2e9d5b;font-weight:800;margin-right:8px}
+.offer .go{display:flex;gap:8px;flex-wrap:wrap}
+.offer .go a{flex:1;text-align:center;text-decoration:none;font-weight:700;font-size:14px;padding:11px 12px;border-radius:11px;background:#1b1a17;color:#fff;white-space:nowrap}
+.offer .go a.alt{background:#efeae0;color:#1b1a17}
+.offer .x{position:absolute;top:10px;right:12px;border:0;background:none;font-size:20px;line-height:1;cursor:pointer;color:#777}
+.offer small{display:block;margin-top:10px;color:#6b665c;font-size:12px}
+.offer.min{width:auto;padding:12px 16px;cursor:pointer}
+.offer.min > *:not(.mini){display:none}
+.offer .mini{display:none;font-weight:700;font-size:14px}
+.offer.min .mini{display:block}
+@media (max-width:768px){.offer{bottom:calc(86px + env(safe-area-inset-bottom));right:10px}}
+/* reveal */
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+    @keyframes rv{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  }
+}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}.badge-rot{animation:none!important}}
+
+.h-cf{padding:clamp(18px,3vw,36px) 0 0}
+.h-cf .card{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border-radius:calc(var(--r) * 2);overflow:hidden;border:1px solid var(--line);min-height:min(78vh,720px)}
+.h-cf .txt{padding:clamp(30px,5vw,72px);display:flex;flex-direction:column;justify-content:center}
+.h-cf h1{margin-top:16px;font-size:clamp(2.6rem,5.6vw,5rem);font-variation-settings:"SOFT" 100,"WONK" 1;letter-spacing:-.02em}
+.h-cf .art{position:relative;min-height:340px}
+.h-cf .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.h-cf .typo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);font-size:clamp(4rem,10vw,8rem)}
+.chip{font-size:.85rem;font-weight:600;padding:7px 13px;border-radius:999px;background:var(--accent2);color:var(--ink)}
+.h-cf .wave{display:block;width:100%;height:40px;margin-top:clamp(40px,6vw,80px);fill:var(--card)}
+.a-cafe .sigs-sec{background:var(--card);padding-top:clamp(40px,6vw,80px)}
+.a-cafe .sig{border-radius:22px;background:var(--bg)}
+.a-cafe .sig .ph{margin:10px;border-radius:16px}
+.a-cafe .btn{border-radius:999px}
+@media (max-width:860px){.h-cf .card{grid-template-columns:1fr}.h-cf .art{min-height:300px;order:-1}}
+</style>
+
+</head>
+<body class="a-cafe h-long ">
+<div class="ribbon">Preview built for <b>Michette</b> by Ryan Cokerdem-DePriest · not the live site yet</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="wordmark">Michette</span></a>
+    <nav class="links"><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#visit">Hours &amp; location</a></nav>
+    <div class="top-cta"><a class="btn ghost" href="tel:+16172015873">Call</a></div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero h-cf">
+  <div class="wrap">
+    <div class="card">
+      <div class="txt">
+        <span class="eyebrow">Bakery · Somerville</span>
+        <h1 class="display">Sourdough, pastries and good vibes on Broadway</h1>
+        <p class="sub">We&#39;re on Broadway in Somerville, and quantities are limited each day, so order ahead for pickup.</p>
+        <div class="actions"><a class="btn ghost" href="#menu">See the menu</a></div>
+        <div class="meta"><span class="pill" data-open hidden><i></i><span></span></span><span class="chip">Order ahead for pickup</span><span class="chip">Vegan options</span></div>
+      </div>
+      <div class="art"><div class="typo display">Michette</div></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20 L1440,40 L0,40 Z"/></svg>
+</section>
+
+
+<div class="marquee" aria-hidden="true"><div class="track"><span>Lemon Poppy Kouign-amann</span><span>Cardamom Bun</span><span>Shokupan</span><span>Fougasse</span><span>Honey lavender Madeleine</span><span>Black Sesame Orange Cookie</span><span>Lemon Poppy Kouign-amann</span><span>Cardamom Bun</span><span>Shokupan</span><span>Fougasse</span><span>Honey lavender Madeleine</span><span>Black Sesame Orange Cookie</span></div></div>
+
+
+
+<section id="menu" class="sigs-sec">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="eyebrow sec-label">Start here</span><h2 class="display">What to order first</h2></div></div>
+    <div class="sigs">
+      
+      <article class="sig rv">
+        <div class="bd"><h3>Lemon Poppy Kouign-amann</h3><p>A spring special with lemon and poppy seed.</p><div class="price">$6.00</div></div>
+      </article>
+      
+      <article class="sig rv">
+        <div class="bd"><h3>Cardamom Bun</h3><p>A spring special bun, also on our croissant list.</p><div class="price">$5.00</div></div>
+      </article>
+      
+      <article class="sig rv">
+        <div class="bd"><h3>Shokupan</h3><p>Bread, from our breads and focaccia list.</p><div class="price">$9.00</div></div>
+      </article>
+      
+      <article class="sig rv">
+        <div class="bd"><h3>Fougasse</h3><p>Bread, from our breads and focaccia list.</p><div class="price">$7.00</div></div>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section id="fullmenu" class="menu">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="eyebrow sec-label">Menu</span><h2 class="display">The menu</h2></div><p class="menu-note">We sell in limited quantities each day. If you don&#39;t see it online, we may still have some in-store.</p></div>
+    <div class="menu-tabs"><a href="#m-1">Spring Specials</a><a href="#m-2">Breads &amp; Focaccia</a><a href="#m-3">Pastries</a><a href="#m-4">Croissants</a><a href="#m-5">Vegan Pastries</a></div>
+    
+    <div class="menu-sec" id="m-1"><h3>Spring Specials</h3>
+      <div class="items">
+        <div class="item"><div class="row"><span class="nm">Lemon Poppy Kouign-amann</span><span class="dots"></span><span class="pr">$6.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Raspberry Almond Croissant</span><span class="dots"></span><span class="pr">$7.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Chocolate Chip &amp; Salted Butter Ficelle</span><span class="dots"></span><span class="pr">$5.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Granola Gourmand</span><span class="dots"></span><span class="pr">$12.50</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Mini Chocolate Brioche</span><span class="dots"></span><span class="pr">$3.00</span></div></div>
+      </div>
+    </div>
+    
+    <div class="menu-sec" id="m-2"><h3>Breads &amp; Focaccia</h3>
+      <div class="items">
+        <div class="item"><div class="row"><span class="nm">Fougasse</span><span class="dots"></span><span class="pr">$7.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Shokupan</span><span class="dots"></span><span class="pr">$9.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Sourdough</span><span class="dots"></span><span class="pr">$10.50</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Super Seeded Baguette</span><span class="dots"></span><span class="pr">$5.75</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Baguette</span><span class="dots"></span><span class="pr">$5.50</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Rosemary &amp; Sea Salt Focaccia<span class="tag">V</span></span><span class="dots"></span><span class="pr">$4.75</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Potatoes, Gruyère and Rosemary Focaccia</span><span class="dots"></span><span class="pr">$6.50</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Roasted Tomato &amp; Rosemary Focaccia</span><span class="dots"></span><span class="pr">$5.80</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Breakfast Focaccia</span><span class="dots"></span><span class="pr">$6.80</span></div></div>
+      </div>
+    </div>
+    
+    <div class="menu-sec" id="m-3"><h3>Pastries</h3>
+      <div class="items">
+        <div class="item"><div class="row"><span class="nm">Chocolate Chunk Cookie</span><span class="dots"></span><span class="pr">$3.90</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Honey lavender Madeleine</span><span class="dots"></span><span class="pr">$3.80</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Black Sesame Orange Cookie</span><span class="dots"></span><span class="pr">$3.90</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Oat Cookie<span class="tag">V</span></span><span class="dots"></span><span class="pr">$3.85</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Basque Cheesecake</span><span class="dots"></span><span class="pr">$6.00 - $7.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Brownie</span><span class="dots"></span><span class="pr">$4.30</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Cannelé</span><span class="dots"></span><span class="pr">$3.80</span></div></div>
+      </div>
+    </div>
+    
+    <div class="menu-sec" id="m-4"><h3>Croissants</h3>
+      <div class="items">
+        <div class="item"><div class="row"><span class="nm">Croissant au Beurre</span><span class="dots"></span><span class="pr">$4.75</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Chocolate Croissant</span><span class="dots"></span><span class="pr">$5.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Cardamom Bun</span><span class="dots"></span><span class="pr">$5.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Everything Croissant</span><span class="dots"></span><span class="pr">$6.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Pistachio Chocolate Croissant</span><span class="dots"></span><span class="pr">$6.75</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Almond Croissant</span><span class="dots"></span><span class="pr">$6.50</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Guava Rol<span class="tag">V</span></span><span class="dots"></span><span class="pr">$5.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Spanakopita Croissant</span><span class="dots"></span><span class="pr">$6.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Pain Suisse</span><span class="dots"></span><span class="pr">$5.90</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Cinnamon Roll<span class="tag">V</span></span><span class="dots"></span><span class="pr">$5.00</span></div></div>
+      </div>
+    </div>
+    
+    <div class="menu-sec" id="m-5"><h3>Vegan Pastries</h3>
+      <div class="items">
+        <div class="item"><div class="row"><span class="nm">Chocolate Croissant<span class="tag">V</span></span><span class="dots"></span><span class="pr">$5.00</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Banana Bread<span class="tag">V</span></span><span class="dots"></span><span class="pr">$3.80</span></div></div>
+      
+        <div class="item"><div class="row"><span class="nm">Banana Bread (Whole)<span class="tag">V</span></span><span class="dots"></span><span class="pr">$32.00</span></div></div>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
+
+
+
+<section id="story" class="story">
+  <div class="wrap story-grid">
+    
+    <div class="rv" style="grid-column:1/-1;max-width:760px"><span class="eyebrow sec-label">About us</span><h2 class="display">Bread and pastry on Broadway</h2><p>We sell sourdough, breads and focaccia, pastries and croissants, plus a short list of vegan pastries.</p><p>We&#39;re at 164 Broadway in Somerville. Order ahead for pickup, or stop in and see what&#39;s left.</p></div>
+  </div>
+</section>
+
+
+
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="eyebrow sec-label">Visit</span><h2 class="display">Come by</h2></div><span class="pill" data-open hidden><i></i><span></span></span></div>
+    <div class="visit-grid">
+      <div class="rv"><h3>Find us</h3><p class="big">164 Broadway Somerville</p><p style="margin-top:10px;opacity:.8">A 0.6 mile walk from Gilman Square station</p><p style="margin-top:16px"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Michette%20164%20Broadway%20Somerville" target="_blank" rel="noopener">Get directions →</a></p></div>
+      <div class="rv"><h3>Hours</h3><ul class="hours"><li data-day="Mon–Fri"><span>Mon–Fri</span><span>7:30 am – 3:30 pm</span></li><li data-day="Sat–Sun"><span>Sat–Sun</span><span>8:00 am – 5:00 pm</span></li></ul></div>
+      <div class="rv"><h3>Get in touch</h3><p class="big"><a href="tel:+16172015873">(617) 201-5873</a></p><div class="actions" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px"></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Michette · Somerville</span><span class="soc"></span></div></footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+<a class="" href="tel:+16172015873"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Call</span></a><a class="main" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Menu</span></a><a class="" href="https://www.google.com/maps/dir/?api=1&amp;destination=Michette%20164%20Broadway%20Somerville" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+</nav>
+
+<aside class="offer min" id="offer" aria-label="About this preview">
+  <button class="x" aria-label="Minimize" onclick="document.getElementById('offer').classList.add('min');event.stopPropagation()">×</button>
+  <div class="mini" onclick="this.parentNode.classList.remove('min');this.parentNode.dataset.done=1">Built for Michette · make it live →</div>
+  <h4>Your new site, ready to go live</h4>
+  <div>I built this for Michette from your current site and menu. It can be live on your own domain this weekend.</div>
+  <ul><li>Your own web address</li><li>Menu with real photos</li><li>One-tap order and directions</li><li>Built for phones first</li></ul>
+  <div class="go"><a href="sms:+17042499818&body=Hi%20Ryan%2C%20this%20is%20Michette.%20We%27d%20like%20the%20new%20website.">Text Ryan</a><a class="alt" href="mailto:ryrycdryrycd@gmail.com?subject=Michette%20website%3A%20let%27s%20make%20it%20live">Email</a></div>
+  <small>$495 once · no monthly fees · pay only after it&#39;s live · by Ryan Cokerdem-DePriest</small>
+</aside>
+
+<script>
+(function(){
+  var H=null;
+  var pills=document.querySelectorAll('[data-open]');
+  if(!H||!pills.length)return;
+  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+  var d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+  function mins(t){var a=t.split(':');return +a[0]*60+(+a[1]||0)}
+  function fmt(t){var h=+t.split(':')[0],mm=t.split(':')[1]||'00';var ap=h>=12&&h<24?'pm':'am';h=h%12||12;return h+(mm!=='00'?':'+mm:'')+' '+ap}
+  var names=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function spans(day){return H[day]||[]}
+  var open=null;
+  spans(d).forEach(function(s){var o=mins(s[0]),c=mins(s[1]);if(c<=o)c+=1440;if(m>=o&&m<c)open=s});
+  var y=(d+6)%7;spans(y).forEach(function(s){var o=mins(s[0]),c=mins(s[1]);if(c<=o&&m<c)open=s});
+  var text,closed=false;
+  if(open){text='Open now · closes '+fmt(open[1]);}
+  else{
+    var found=null;
+    for(var i=0;i<8&&!found;i++){var dd=(d+i)%7;spans(dd).forEach(function(s){if(found)return;if(i===0&&mins(s[0])<=m)return;found=[dd,s]})}
+    if(!found)return;
+    closed=true;
+    text='Closed · opens '+(found[0]===d?'':found[0]===(d+1)%7?'tomorrow ':names[found[0]]+' ')+fmt(found[1][0]);
+  }
+  pills.forEach(function(p){p.querySelector('span').textContent=text;if(closed)p.classList.add('closed');p.hidden=false});
+})();
+</script>
+<script>
+(function(){var o=document.getElementById('offer');if(!o)return;
+function chk(){if(o.dataset.done)return;var h=document.documentElement;if((h.scrollTop+innerHeight)/h.scrollHeight>0.55){o.classList.remove('min');o.dataset.done=1}}
+addEventListener('scroll',chk,{passive:true});setTimeout(function(){if(!o.dataset.done){o.classList.remove('min');o.dataset.done=1}},14000);})();
+</script>
+</body>
+</html>

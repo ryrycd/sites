@@ -7,12 +7,12 @@
 <meta name="description" content="Coffee, sandwiches and ice cream at 257 Elm Street in Somerville.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Diesel Cafe">
-
+<meta property="og:image" content="img/p01-1800.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
-
+<link rel="preload" as="image" href="img/p01-900.jpg" media="(max-width: 700px)"><link rel="preload" as="image" href="img/p01-1800.jpg" media="(min-width: 701px)">
 <style>
 :root{
   --accent: #6f2a4e; --on-acc: #fbf4e8; --accent2: #89c89c; --on-acc2: #16130f;
@@ -278,7 +278,7 @@ footer .row a{text-decoration:underline;text-underline-offset:3px}
   <div class="wrap in">
     <a href="#top" class="wm" data-fit="1">Diesel Cafe<span class="chip">Preview</span></a>
     <nav class="links">
-      
+      <a href="#menu">Menu</a>
       <a href="#visit" class="hide-m">Visit</a>
       <a class="btn solid" href="tel:+16176298717">Call</a>
     </nav>
@@ -286,7 +286,7 @@ footer .row a{text-decoration:underline;text-underline-offset:3px}
 </header>
 
 <main id="top">
-<section class="hero-wrap nophoto" id="herowrap">
+<section class="hero-wrap" id="herowrap">
   <div class="hero" id="hero">
   
     <div class="top wrap" id="herocopy">
@@ -298,7 +298,7 @@ footer .row a{text-decoration:underline;text-underline-offset:3px}
     </div>
     <div class="stage">
       <div class="media" id="frame">
-        
+        <img src="img/p01-900.jpg" srcset="img/p01-900.jpg 900w, img/p01-1800.jpg 1800w" sizes="100vw" alt="" class="on" fetchpriority="high"><img src="img/p02-900.jpg" srcset="img/p02-900.jpg 900w, img/p02-1800.jpg 1800w" sizes="100vw" alt="" loading="lazy"><img src="img/p03-900.jpg" srcset="img/p03-900.jpg 900w, img/p03-1800.jpg 1800w" sizes="100vw" alt="" loading="lazy"><img src="img/p04-900.jpg" srcset="img/p04-900.jpg 900w, img/p04-1800.jpg 1800w" sizes="100vw" alt="" loading="lazy">
       </div>
     </div>
   
@@ -310,7 +310,7 @@ footer .row a{text-decoration:underline;text-underline-offset:3px}
 <section class="intro wrap">
   
   <nav class="bbar rv" aria-label="Quick actions">
-    
+    <a href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 7h14M5 12h14M5 17h9"/></svg>Menu</a>
     
     <a href="tel:+16176298717" class="main"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
     <a href="https://www.google.com/maps/dir/?api=1&amp;travelmode=walking&amp;destination=Diesel%20Cafe%2C%20257%20Elm%20Street%2C%20Somerville%2C%20MA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
@@ -330,9 +330,239 @@ footer .row a{text-decoration:underline;text-underline-offset:3px}
 
 
 
+<section class="gal wrap">
+  <div class="grid">
+    <div class="colwrap">
+      <figure class="rimg arch s"><img src="img/p05-900.jpg" alt="" loading="lazy" data-par="0.08"></figure><figure class="rimg s"><img src="img/p07-900.jpg" alt="" loading="lazy" data-par="0.08"></figure>
+    </div>
+    <div class="colwrap col2">
+      <figure class="rimg s"><img src="img/p06-900.jpg" alt="" loading="lazy" data-par="-0.06"></figure><figure class="rimg t"><img src="img/p08-900.jpg" alt="" loading="lazy" data-par="-0.06"></figure>
+    </div>
+  </div>
+</section>
 
 
 
+
+
+<section class="menu" id="menu">
+  <div class="wrap"><h2 class="disp rv">Menu</h2></div>
+  
+  <div class="tabs"><div class="in" id="tabs"><a href="#m-breakfast">Breakfast</a><a href="#m-sandwiches">Sandwiches</a><a href="#m-salads">Salads</a><a href="#m-drinks">Drinks</a></div></div>
+  
+  <div class="wrap">
+    
+    <div class="msec" id="m-breakfast">
+      <h3>Breakfast</h3>
+      <div class="items">
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Classic Egg &amp; Cheese</span><span class="pr">$8.75</span></div>
+          
+          <div class="ds">Dijonnaise, Egg, Cheddar &amp; Spinach</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Pallet</span><span class="pr">$10.25</span></div>
+          
+          <div class="ds">Pesto, Egg, Cheese, Tomato, Roasted Onion &amp; Greens</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Breakfast Burrito</span><span class="pr">$14.50</span></div>
+          
+          <div class="ds">2 eggs, cheddar, black beans, jalapeno crema, salsa, avocado &amp; spinach on a wrap</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Avocado Toast</span><span class="pr">$8.25</span></div>
+          
+          <div class="ds">Avocado on Toast topped with Olive Oil, Salt &amp; Pepper</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">The Joplin</span><span class="pr">$10.50</span></div>
+          
+          <div class="ds">Maple Butter, Chicken Sausage, Egg &amp; Cheddar</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Bagel from Forge Baking Co</span><span class="pr">$3.45</span></div>
+          
+          <div class="ds">House-made Forge Baking Company bagel with your choice of spreads: plain cream cheese, scallion cream cheese, tofutti, butter or jam. Bagel flavors may change seasonally.</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Bagel &amp; Lox</span><span class="pr">$15</span></div>
+          
+          <div class="ds">Cold-smoked Lox, Cucumber, Tomato, Sprouts &amp; Plain Cream Cheese</div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="msec" id="m-sandwiches">
+      <h3>Sandwiches</h3>
+      <div class="items">
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Vegan Club</span><span class="pr">$15.85</span></div>
+          
+          <div class="ds">Roasted Tofu, Avocado, Tempeh Bacon, Tomato, Sriracha Mayo &amp; Greens</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Monkey Wrench</span><span class="pr">$15.50</span></div>
+          
+          <div class="ds">Dijonnaise, Avocado, Turkey, Cheddar, Sprouts, Tomato &amp; Greens</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">The Elm</span><span class="pr">$16</span></div>
+          
+          <div class="ds">Turkey, Bacon, Tomato, Sriracha Mayo &amp; Greens</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">The Holland</span><span class="pr">$14</span></div>
+          
+          <div class="ds">Avocado, Bacon, Tomato, Garlic Mayo &amp; Greens</div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="msec" id="m-salads">
+      <h3>Salads</h3>
+      <div class="items">
+        
+        <div class="item">
+          <div class="l1"><span class="nm">The Highland Salad</span><span class="pr">$16.75</span></div>
+          
+          <div class="ds">Greens, Roasted Onion, Tomato, Cucumber, Avocado, Sprouts, with Champagne Vinaigrette and Choice of Protein</div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="msec" id="m-drinks">
+      <h3>Drinks</h3>
+      <div class="items">
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Blend Batch Brew</span></div>
+          
+          <div class="ds">16oz/24oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Single Origin</span></div>
+          
+          <div class="ds">market</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Cafe au Lait</span></div>
+          
+          <div class="ds">Choice of steamed milk</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Vietnamese</span></div>
+          
+          <div class="ds">Made with sweetened condensed milk</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Chai Tea Latte</span></div>
+          
+          <div class="ds">Made with Kilogram&#39;s Masala Chai</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Loose Leaf Tea</span><span class="pr">MP</span></div>
+          
+          <div class="ds">Rotating seasonal selections</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Espresso</span></div>
+          
+          <div class="ds">Double</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Americano</span></div>
+          
+          <div class="ds">12oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Macchiato</span></div>
+          
+          <div class="ds">3oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Cortado</span></div>
+          
+          <div class="ds">4oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Cappuccino</span></div>
+          
+          <div class="ds">8oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Latte</span></div>
+          
+          <div class="ds">12oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Mocha</span></div>
+          
+          <div class="ds">Latte with chocolate</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Spanish Latte</span></div>
+          
+          <div class="ds">Latte with sweetened condensed milk</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Lemonade</span></div>
+          
+          <div class="ds">16oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Black Iced Tea</span></div>
+          
+          <div class="ds">16oz / 24oz</div>
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Hot Chocolate</span></div>
+          
+          
+        </div>
+        
+        <div class="item">
+          <div class="l1"><span class="nm">Tuck&#39;s Turtle</span></div>
+          
+          <div class="ds">A decadent and warming beverage! A mixture of our house made chocolate, house made caramel, and house made vanilla swirled together with perfectly steamed milk!</div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
 
 
 <section class="visit wrap" id="visit">
@@ -370,7 +600,7 @@ footer .row a{text-decoration:underline;text-underline-offset:3px}
 </footer>
 
 <div class="fab" id="fab">
-  
+  <a href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 7h14M5 12h14M5 17h9"/></svg>Menu</a>
   
   <a class="main" href="tel:+16176298717" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
 </div>
